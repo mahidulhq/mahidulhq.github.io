@@ -1,10 +1,7 @@
 ---
 title: Jekyll er drama!
 tags: random
-article_header:
-  type: 
-  image:
-    src: 
+
 ---
 
 # **Jekyll on GitHub: Ei Mindf*ck Ta Ki R Bhai!**  
