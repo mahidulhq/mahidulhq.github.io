@@ -40,7 +40,3 @@ I'm a CSE undergraduate passionate about cybersecurity and building secure, user
 ### Professional Focus  
 Currently exploring full-stack development while deepening cybersecurity expertise. I thrive at the intersection of technical implementation and human-centered design.
 
-### Connect  
-<i class="fab fa-github"></i> [GitHub/mahidulhq](https://github.com/mahidulhq)  
-<i class="fab fa-medium"></i> [Medium/mahidulhq](https://medium.com/@mahidulhq)  
-<i class="fab fa-twitter"></i> [X/mahidulhq](https://twitter.com/mahidulhq)
