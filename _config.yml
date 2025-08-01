@@ -22,7 +22,7 @@ url     : https://mahidulhq.github.io # the base hostname & protocol for your si
 baseurl : # does not include hostname
 title   : mahidulhq
 description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+  a personal website and testing stuffs.
 
 
 ## => Language and Timezone
@@ -34,9 +34,9 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
+  type      : "person" # "person" (default), "organization"
   name      : Mahidul Haque
-  url       :
+  url       : https://mahidulhq.github.io/portfolio/
   avatar    : # path or url of avatar image (square)
   bio       : wait up
   email     :
@@ -49,7 +49,7 @@ author:
   zhihu     : # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   douban    : # "user_name" the last part of your profile url, e.g. https://www.douban.com/people/user_name
   linkedin  : # "user_name" the last part of your profile url, e.g. https://www.linkedin.com/in/user_name
-  github    : # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  github    : https://github.com/mahidulhq # "user_name" the last part of your profile url, e.g. https://github.com/user_name
   npm       : # "user_name" the last part of your profile url, e.g. https://www.npmjs.com/~user_name
 
 
