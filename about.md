@@ -25,7 +25,7 @@ key: page-about
 ---
 
 @mahidulhq  
-Hi readers, how are you doin on this crazy site? I'm just another blogger/writer/tech enthusiast from Syl, BD - who likes to explore teach n stuff also I've been start own podcast named "KiChole Cast". The thing is I do have a lot of interest in computer science which I'm currently studying. In my professional life, I'm a UX/UI designer, worked on product design, SEO, online marketing, web design blah blah... Right now focusing on cybersecurity development and learning various skills.
+Hi readers, how are you doin on this crazy site? I'm just another blogger/writer/tech enthusiast from Syl, BD - who likes to explore teach n stuff also I've been started my own podcast named "KiChole Cast". The thing is I do have a lot of interest in computer science which I'm currently studying. In my professional life, I'm a UX/UI designer, worked on product design, SEO, online marketing, web design blah blah... Right now focusing on cybersecurity development and learning various skills.
 
 I'm gonna share my experience and explore random cool stuff HOPE it will be helpful and fun to read for you.
 
