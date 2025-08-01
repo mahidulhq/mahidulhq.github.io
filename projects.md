@@ -21,7 +21,7 @@ key: page-projects
 - **Features**: Key features
 - **Link**: [mahidulhq/portfolio](https://github.com/mahidulhq/portfolio)
 
-**Podcastt**
+**Podcast**
 - **Description**: My podcast about technology and life
 - **Platform**: [KiChole Cast](https://www.youtube.com/@mahidulhq)
 - **Topics**: Technology, productivity, personal development
