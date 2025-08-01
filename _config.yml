@@ -206,7 +206,6 @@ defaults:
       path: ""
       type: posts
     values:
-      date: "{% raw %}{{ site.time }}{% endraw %}"  # Will use build time
       layout: article
       sharing: true
       license: false
