@@ -25,7 +25,7 @@ key: page-about
 ---
 
 @mahidulhq  
-Computer Science & Engineering Student` | `Cybersecurity Enthusiast` | `UX/UI Designer
+`Computer Science & Engineering Student` | `Cybersecurity Enthusiast` | `UX/UI Designer`
 
 I'm a CSE undergraduate passionate about cybersecurity and building secure, user-centered digital experiences. With **3+ years in UX/UI design**, I specialize in transforming complex requirements into intuitive interfaces that balance aesthetics with functionality.
 
