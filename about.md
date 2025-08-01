@@ -25,16 +25,10 @@ key: page-about
 ---
 
 @mahidulhq  
-`Computer Science & Engineering Student` | `Cybersecurity Enthusiast` | `UX/UI Designer`
+Hi readers, how are you doin on this crazy site? I'm just another blogger/writer/tech enthusiast from Syl, BD - who likes to explore teach n stuff also I've been start own podcast named "KiChole Cast". The thing is I do have a lot of interest in computer science which I'm currently studying. In my professional life, I'm a UX/UI designer, worked on product design, SEO, online marketing, web design blah blah... Right now focusing on cybersecurity development and learning various skills.
 
-I'm a CSE undergraduate passionate about cybersecurity and building secure, user-centered digital experiences. With **3+ years in UX/UI design**, I specialize in transforming complex requirements into intuitive interfaces that balance aesthetics with functionality.
+I'm gonna share my experience and explore random cool stuff HOPE it will be helpful and fun to read for you.
 
-### Core Competencies  
-- **Engineering**: Mastering low-level programming (C/C++), web foundations (HTML/CSS)  
-- **Design**: Figma expert, Adobe Creative Suite, product design systems  
-- **Multimedia**: Intermediate video editing (Premiere Pro, After Effects)  
-- **Cybersecurity**: Currently expanding knowledge in network security and ethical hacking  
+Stay tuned!
 
-### Professional Focus  
-Currently exploring full-stack development while deepening cybersecurity expertise. I thrive at the intersection of technical implementation and human-centered design.
 
