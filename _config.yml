@@ -37,7 +37,7 @@ author:
   type      : "person" # "person" (default), "organization"
   name      : Mahidul Haque
   url       : https://mahidulhq.github.io/
-  avatar    : /assets/images/logo/logo.png # path or url of avatar image (square)
+  avatar    :  # path or url of avatar image (square)
   bio       : Tech Enthusiast from Bangladesh
   email     :
   facebook  : mahidulhq.profile # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
