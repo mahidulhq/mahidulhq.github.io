@@ -9,8 +9,6 @@ titles:
 key: page-projects
 ---
 
-## Web Development Projects
-
 ### Project 1: Personal Website
 - **Description**: This Jekyll-based personal website and blog
 - **Technologies**: Jekyll, HTML, CSS, JavaScript
