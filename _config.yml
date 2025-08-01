@@ -36,9 +36,9 @@ timezone: Asia/Dhaka # see https://en.wikipedia.org/wiki/List_of_tz_database_tim
 author:
   type      : "person" # "person" (default), "organization"
   name      : Mahidul Haque
-  url       : https://mahidulhq.github.io/portfolio/
+  url       : https://mahidulhq.github.io/
   avatar    : # path or url of avatar image (square)
-  bio       : wait up
+  bio       : Tech Enthusiast from Bangladesh
   email     :
   facebook  : mahidulhq.profile # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : mahidulhq # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
