@@ -4,8 +4,6 @@ tags: tutorial
 
 ---
 
-
-
 ![captionless image](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*23mqOtAAy1oZcEnmePDWJQ.png)
 
 Welcome to the wonderful world of the Linux command line. I know, I know that black screen with blinking cursor might look intimidating at first, but trust me, once you get the hang of it, you’ll feel like you have superpowers or maybe not :)
