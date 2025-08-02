@@ -12,7 +12,7 @@ Welcome to the wonderful world of the Linux command line. I know, I know that bl
 
 Think of the command line as a direct chat with your computer. Instead of clicking around, you tell it exactly what to do. It’s faster, precise, and pretty cool once you dive in.
 
-# Getting Started: Your Linux Command Line Journey
+### Getting Started: Your Linux Command Line Journey
 
 
 Every Linux user began right where you are now, feeling confused, making mistakes, maybe even accidentally deleting files (it happens!). The secret? Practice safely and don’t be afraid to experiment.
