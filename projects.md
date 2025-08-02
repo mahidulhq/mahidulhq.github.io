@@ -23,5 +23,5 @@ key: page-projects
 
 **Podcast**
 - **Description**: My podcast about technology and life
-- **Platform**: [KiChole Cast](https://www.youtube.com/@mahidulhq)
+- **Platform**: [kiChole Cast](https://www.youtube.com/@mahidulhq)
 - **Topics**: Technology, productivity, personal development
