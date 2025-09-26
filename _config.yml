@@ -9,40 +9,40 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone:
+timezone: Asia/Dhaka
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Mahidul Haque # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: Cyber Security Enthusiast | UX/UI Designer & Figma Expert # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  A personal website of Mahidul Haque.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://mahidulhq.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: mahidulhq # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: mahidulhq # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: your_full_name
-  email: example@domain.com # change to your email address
+  name: Mahidul Haque
+  email: mahikysr@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/mahidulhq # change to your Twitter homepage
+    - https://github.com/mahidulhq # change to your GitHub homepage
     # Uncomment below to add more social links
-    # - https://www.facebook.com/username
-    # - https://www.linkedin.com/in/username
+    # - https://www.facebook.com/mahidulhq.profile
+    # - https://www.linkedin.com/in/mahidulhq
 
 # Site Verification Settings
 webmaster_verifications:
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://scontent.fzyl6-1.fna.fbcdn.net/v/t39.30808-6/550224689_654020004421385_5598661630338148771_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGMU46pK9e5CkrVuo6OiH31r2dOPGjYFM-vZ048aNgUz8oly2MoSjoYLo_H_wRU5d-joiA7rKOV-YgzbxvGCGyQ&_nc_ohc=pAOkuFRGmGUQ7kNvwE-ItGQ&_nc_oc=AdlttZxO-ciwIIB5z03vlOqiusChKOooOODz0XP9nsf_vCIsTo3-z10-QEG_4g2mW6Y&_nc_zt=23&_nc_ht=scontent.fzyl6-1.fna&_nc_gid=3Crm8SHOWWYA4-0YBubDCg&oh=00_AfYiaufe94sJ8LWyQ8X0UwzTu4mZGQ-ccNr5iRATw4d0Tg&oe=68DC8ECC
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
