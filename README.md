@@ -10,4 +10,4 @@ My [website](https://mahidulhq.github.io/) showcases my projects, blog posts, an
 
 This site content and code are licensed under the MIT License.
 
-Feel free to explore the source and contribute or suggest improvements! Thank you for visiting my personal website repository <3
+Feel free to explore the source and contribute or suggest improvements! Thank you for visiting my personal website repository.
