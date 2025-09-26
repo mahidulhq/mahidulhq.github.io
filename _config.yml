@@ -9,7 +9,7 @@ theme: jekyll-theme-chirpy
 lang: en
 
 # Change to your timezone › https://kevinnovak.github.io/Time-Zone-Picker
-timezone: Asia/Dhaka
+timezone: 
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://scontent.fzyl6-1.fna.fbcdn.net/v/t39.30808-6/550224689_654020004421385_5598661630338148771_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGMU46pK9e5CkrVuo6OiH31r2dOPGjYFM-vZ048aNgUz8oly2MoSjoYLo_H_wRU5d-joiA7rKOV-YgzbxvGCGyQ&_nc_ohc=pAOkuFRGmGUQ7kNvwE-ItGQ&_nc_oc=AdlttZxO-ciwIIB5z03vlOqiusChKOooOODz0XP9nsf_vCIsTo3-z10-QEG_4g2mW6Y&_nc_zt=23&_nc_ht=scontent.fzyl6-1.fna&_nc_gid=3Crm8SHOWWYA4-0YBubDCg&oh=00_AfYiaufe94sJ8LWyQ8X0UwzTu4mZGQ-ccNr5iRATw4d0Tg&oe=68DC8ECC
+avatar: 
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
