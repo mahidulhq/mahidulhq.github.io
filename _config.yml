@@ -41,8 +41,8 @@ social:
     - https://twitter.com/mahidulhq # change to your Twitter homepage
     - https://github.com/mahidulhq # change to your GitHub homepage
     # Uncomment below to add more social links
-    - https://www.facebook.com/mahidulhq.profile
-    - https://www.linkedin.com/in/mahidulhq
+    # - https://www.facebook.com/mahidulhq.profile
+    # - https://www.linkedin.com/in/mahidulhq
 
 # Site Verification Settings
 webmaster_verifications:
