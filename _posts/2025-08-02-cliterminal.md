@@ -167,7 +167,7 @@ nano file.txt            # Open or create file in nano
 # Ctrl+X to exit, Ctrl+O to save, Ctrl+K to cut line
 ```
 
-Nano is like training wheels for Linux text editing — it’s friendly and forgiving.
+Nano is like training wheels for Linux text editing   it’s friendly and forgiving.
 
 ### vim
 
@@ -193,7 +193,7 @@ find . -type d -name "test"  # Find directories named "test"
 
 ### grep
 
-Search for text inside files — incredibly powerful.
+Search for text inside files   incredibly powerful.
 
 ```
 grep "error" logfile.txt     # Find lines containing "error"
@@ -255,7 +255,7 @@ uname -r                     # Show kernel version
 
 ### df
 
-Check your disk space — essential for system management.
+Check your disk space   essential for system management.
 
 ```
 df -h                        # Show disk usage in human-readable format
@@ -345,7 +345,7 @@ wget -r https://site.com             # Download entire website
 
 ### man
 
-Your built-in manual — never be lost again.
+Your built-in manual   never be lost again.
 
 ```
 man ls                       # Show manual for ls command
@@ -363,7 +363,7 @@ which firefox                # Find Firefox location
 
 ### history
 
-See your command history — great for remembering what you did.
+See your command history   great for remembering what you did.
 
 ```
 history                      # Show recent commands

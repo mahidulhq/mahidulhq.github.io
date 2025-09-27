@@ -106,7 +106,7 @@ C++ uses class:
 
 This is where C++ gets powerful it supports object-oriented programming (OOP) using classes, inheritance, and encapsulation.
 
-# Standard Template Library (STL) — C++ Only
+# Standard Template Library (STL)   C++ Only
 
 C++ comes with built-in tools like vectors, maps, stacks, and algorithms.
 
