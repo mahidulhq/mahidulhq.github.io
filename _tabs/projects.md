@@ -3,6 +3,7 @@ layout: page
 title: Projects
 icon: fas fa-briefcase
 order: 2
+permalink: /projects/   # this sets the URL path
 ---
 
 Here are some example projects (just test data for now):
