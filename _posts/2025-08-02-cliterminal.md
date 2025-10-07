@@ -1,7 +1,7 @@
 ---
 title: "Your Friendly Guide to Terminal Mastery (Linux CLI Commands)"
 date: 2025-08-02 22:00:00 +0600
-categories: [tutorial, how-to]
+categories: [what-is]
 tags: [cli, terminal]
 ---
 

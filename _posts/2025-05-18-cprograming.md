@@ -1,7 +1,7 @@
 ---
 title: "C vs C++: A Beginner’s Guide to Syntax and Similarities"
 date: 2025-05-18 22:00:00 +0600
-categories: [tutorial, how-to]
+categories: [what-is]
 tags: [c, c++, programming]
 ---
 

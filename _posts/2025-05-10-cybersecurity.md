@@ -1,7 +1,7 @@
 ---
 title: "How Cybersecurity Experts Think Like Hackers to Stop Hackers"
 date: 2025-05-10 22:00:00 +0600
-categories: [tutorial, how-to]
+categories: [what-is]
 tags: [cybersecurity]
 ---
 
