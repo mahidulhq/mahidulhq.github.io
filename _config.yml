@@ -22,8 +22,7 @@ user:
   name: Mahidul Haque
   pic: /assets/img/profile.jpg
   picAlt: "mahidulhq"
-  job: Cybersecurity Enthusiast 
-   UX/UI Designer & Figma Expert
+  job: Cybersecurity Enthusiast | UX/UI Designer & Figma Expert
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
