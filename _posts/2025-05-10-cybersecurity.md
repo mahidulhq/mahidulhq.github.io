@@ -1,8 +1,7 @@
 ---
 title: "How Cybersecurity Experts Think Like Hackers to Stop Hackers"
 date: 2025-05-10 22:00:00 +0600
-categories: [what-is]
-tags: [cybersecurity]
+categories: [writing]
 ---
 
 When discussing cybersecurity, one of the most interesting things is how companies test and protect their systems. That’s where the Blue Team and Red Team come in. These are two sides of the same coin one protects, the other attacks, but both have the same goal: *making the system more secure.*

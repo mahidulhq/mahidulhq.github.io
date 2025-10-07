@@ -1,8 +1,7 @@
 ---
 title: "How to Stop Wasting Your Life (Before It’s Too Late)"
 date: 2025-03-23 22:00:00 +0600
-categories: [productivity]
-tags: [productivity]
+categories: [writing]
 ---
 
 You are suffering from an evil that you created. This evil doesn’t come from the outside it’s inside you, controlling you. It does the same things every day:
