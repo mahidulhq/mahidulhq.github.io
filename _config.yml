@@ -8,8 +8,8 @@ description: > # this means to ignore newlines until "baseurl"
 baseurl: # the subpath of the site
 url: https://mahidulhq.github.io # the base hostname & protocol for your site
 
-permalink: /:year-:month/:title
-timezone:
+permalink: /:2025-:October/:Mahidul
+timezone: Asia/Dhaka
 
 favicon: /assets/img/favicon.ico
 
@@ -19,10 +19,10 @@ cusdis:
     app_id: #your cusdis app_id
 
 user:
-  name: Catbook
-  pic: /assets/img/cat.jpg
-  picAlt: "catbook"
-  job: a category-centric theme
+  name: Mahidul Haque
+  pic: /assets/img/profile.jpg
+  picAlt: "mahidulhq"
+  job: Cybersecurity Enthusiast | UX/UI Designer & Figma Expert
   aboutme: true # comment this out if you don't need the 'about' page.
 
 exclude:
