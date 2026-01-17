@@ -1,9 +1,9 @@
 ---
 layout: home
 ---
-<!-- <div style="max-width: 800px; margin: 0 auto; text-align: left;">
+<div style="max-width: 800px; margin: 0 auto; text-align: left;">
   <p>
-    > CS student <br>
+    <!-- > CS student <br>
     > active learner in the CyberSecurity field<br>
     > penetration tester, security consultant<br>
     > masterd UI designs and UX research<br>
@@ -14,25 +14,11 @@ layout: home
     > interests- privacy & security, open-source, technology exploration/ testing/ debugging, design systems<br>
     > open for collab: 
     <a href="mahikysr@gmail.com">mahikysr@gmail.com</a>
-    <br>
-     -->
+    <br> -->
     connect: 
     <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
     <a href="https://github.com/mahidulhq">github</a>
     <a href="https://x.com/mahidulhq">x</a>
     <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
-
-<!-- 
-    =====social=====
-<div style="display: flex; gap: 0.5em; align-items: center; white-space: nowrap;">
-  <a href="https://x.com/mahidulhq">x</a>
-  <span>|</span>
-  <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
-  <span>|</span>
-  <a href="https://github.com/mahidulhq">github</a>
-  <span>|</span>
-  <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
-</div> -->
-
   </p>
 </div>
