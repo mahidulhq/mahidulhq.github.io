@@ -9,14 +9,14 @@ entries:
         url: https://github.com/mahidulhq
       - title: "commit ichhamoton"
 
-  - title: writings
+  - title: WRITING
     post_list:
       limit: 5
       show_more: true
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: byCategory
     post_list:
       category: example2
       show_more: true
