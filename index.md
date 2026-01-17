@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-<div style="max-width: 800px; margin: 0 auto; text-align: right;">
+<div style="max-width: 800px; margin: 0 auto; text-align: left;">
   <p>
     > CS student <br>
     > active learner in the CyberSecurity field<br>
@@ -17,5 +17,20 @@ layout: home
     <br>
     connect: 
     <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
+    <a href="https://github.com/mahidulhq">github</a>
+    <a href="https://x.com/mahidulhq">x</a>
+    <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
+
+
+<div style="display: flex; gap: 0.5em; align-items: center; white-space: nowrap;">
+  <a href="https://x.com/mahidulhq">x</a>
+  <span>|</span>
+  <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
+  <span>|</span>
+  <a href="https://github.com/mahidulhq">github</a>
+  <span>|</span>
+  <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
+</div>
+
   </p>
 </div>

@@ -13,16 +13,16 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: SOCIAL
-    entries:
-      - title: github
-        url: https://github.com/mahidulhq
-      - title: linkedin
-        url: https://www.linkedin.com/in/mahidulhq/
-      - title: x
-        url: https://x.com/mahidulhq
-      - title: facebook
-        url: https://www.facebook.com/mahidulhq.page/
+  # - title: SOCIAL
+  #   entries:
+  #     - title: github
+  #       url: https://github.com/mahidulhq
+  #     - title: linkedin
+  #       url: https://www.linkedin.com/in/mahidulhq/
+  #     - title: x
+  #       url: https://x.com/mahidulhq
+  #     - title: facebook
+  #       url: https://www.facebook.com/mahidulhq.page/
 
   # - title: byCategory
   #   post_list:
@@ -41,13 +41,13 @@ entries:
   #         - title: with subsubitems
   #         - title: example page
   #           url: about
-  - title: ABOUT
-    entries:
-      - title: CS student and active learner in the CyberSecurity field 
-      - title: penetration tester, security consultant 
-      - title: masterd UI designs and UX research 
-      - title: CP road to 1.5k rating and solving 1k problems at CC
-      - title: active CTF player at HTB, THM, picoCTF
-      - title: known languages HTML, CSS, C, C++, Python, Bash
-      - title: certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy 
-      - title: interests on privacy & security, open-source, technology exploration/ testing/ debugging, design systems
+  # - title: ABOUT
+  #   entries:
+  #     - title: CS student and active learner in the CyberSecurity field 
+  #     - title: penetration tester, security consultant 
+  #     - title: masterd UI designs and UX research 
+  #     - title: CP road to 1.5k rating and solving 1k problems at CC
+  #     - title: active CTF player at HTB, THM, picoCTF
+  #     - title: known languages HTML, CSS, C, C++, Python, Bash
+  #     - title: certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy 
+  #     - title: interests on privacy & security, open-source, technology exploration/ testing/ debugging, design systems
