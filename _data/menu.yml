@@ -16,12 +16,12 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: byCategory
-    post_list:
-      category: example2
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: example2-archive.html
+  # - title: byCategory
+  #   post_list:
+  #     category: example2
+  #     show_more: true
+  #     show_more_text: See more posts...
+  #     show_more_url: example2-archive.html
 
   # - title: rss
   #   url: feed.xml
@@ -33,6 +33,6 @@ entries:
   #         - title: with subsubitems
   #         - title: example page
   #           url: about
-  # - title: PRO TIP
-  #   entries:
-  #     - title: to edit this menu, edit _data/menu.yml file
+  - title: ABOUT
+    entries:
+      - title: CS student, active learner in the CyberSecurity field. penetration tester, security consultant. masterd UI designs and UX research. programmer- road to 1.5k rating and solving 1k problems at CC. active CTF player at HTB, THM, picoCTF. known languages HTML, CSS, C, C++, Python ,Bash. certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy. interests- privacy & security, open-source, technology exploration/ testing/ debugging, design systems
