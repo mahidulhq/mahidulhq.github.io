@@ -7,7 +7,6 @@ entries:
       - title: cybersecurity enthusiast, ux/ui designer, tech blogger
       - title: github
         url: https://github.com/mahidulhq
-      - title: "commit ichhamoton"
 
   - title: WRITING
     post_list:
@@ -15,6 +14,17 @@ entries:
       show_more: true
       show_more_text: See archive...
       show_more_url: archive.html
+
+  - title: SOCIAL
+    entries:
+      - title: github
+        url: https://github.com/mahidulhq
+      - title: linkedin
+        url: https://www.linkedin.com/in/mahidulhq/
+      - title: x
+        url: https://x.com/mahidulhq
+      - title: facebook
+        url: https://www.facebook.com/mahidulhq.page/
 
   # - title: byCategory
   #   post_list:
