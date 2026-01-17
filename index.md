@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+<div style="max-width: 800px; margin: 0 auto; text-align: right;">
   <p>
     > CS student <br>
     > active learner in the CyberSecurity field<br>
@@ -14,9 +14,8 @@ layout: home
     > interests- privacy & security, open-source, technology exploration/ testing/ debugging, design systems<br>
     > open for collab: 
     <a href="mahikysr@gmail.com">mahikysr@gmail.com</a>
+    <br>
+    connect: 
+    <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
   </p>
 </div>
-
-<p style="font-size: 64px; color: #444; margin: 40px 0; text-align: center;">
- connect: <a href="https://www.linkedin.com/in/mahidulhq/" target="_blank">linkedin</a>
-</p>
