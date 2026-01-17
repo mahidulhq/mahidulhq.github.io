@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+<div style="max-width: 800px; margin: 0 auto; text-align: left;">
   <p>
     <!-- > CS student <br>
     > active learner in the CyberSecurity field<br>
@@ -15,7 +15,7 @@ layout: home
     > open for collab: 
     <a href="mahikysr@gmail.com">mahikysr@gmail.com</a>
     <br> -->
-    connect: 
+    📩: 
     <a href="https://www.linkedin.com/in/mahidulhq/">linkedin</a>
     <a href="https://github.com/mahidulhq">github</a>
     <a href="https://x.com/mahidulhq">x</a>
