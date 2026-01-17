@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
-<div style="max-width: 800px; margin: 0 auto; text-align: left;">
+<div style="max-width: 800px; margin: 0 auto; text-align: center;">
   <p>
     <!-- > CS student <br>
     > active learner in the CyberSecurity field<br>
