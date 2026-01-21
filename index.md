@@ -22,6 +22,3 @@ layout: home
     <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
   </p>
 </div>
-<!-- goat counter -->
-<script data-goatcounter="https://darknight.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
