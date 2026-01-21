@@ -2,8 +2,6 @@
 layout: home
 ---
 <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-<script data-goatcounter="https://darknight.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
   <p>
     <!-- > CS student <br>
     > active learner in the CyberSecurity field<br>
@@ -24,3 +22,6 @@ layout: home
     <a href="https://www.facebook.com/mahidulhq.page/">facebook</a>
   </p>
 </div>
+<!-- goat counter -->
+<script data-goatcounter="https://darknight.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
