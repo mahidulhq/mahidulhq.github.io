@@ -4,13 +4,13 @@
 entries:
   - title: INTRO
     entries:
-      - title: cybersecurity enthusiast, ux/ui designer, tech blogger
+      - title: cybersecurity enthusiast, ux/ui designer, tech explorer
 
   - title: WRITING
     post_list:
       limit: 5
       show_more: true
-      show_more_text: See archive...
+      show_more_text: more...
       show_more_url: archive.html
 
   # - title: SOCIAL
