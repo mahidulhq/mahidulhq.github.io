@@ -34,20 +34,20 @@ entries:
   # - title: rss
   #   url: feed.xml
   
-  # - title: another list
-  #   entries:
-  #     - title: with subitems
-  #       entries:
-  #         - title: with subsubitems
-  #         - title: example page
-  #           url: about
-  # - title: ABOUT
-  #   entries:
-  #     - title: CS student and active learner in the CyberSecurity field 
-  #     - title: penetration tester, security consultant 
-  #     - title: masterd UI designs and UX research 
-  #     - title: CP road to 1.5k rating and solving 1k problems at CC
-  #     - title: active CTF player at HTB, THM, picoCTF
-  #     - title: known languages HTML, CSS, C, C++, Python, Bash
-  #     - title: certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy 
-  #     - title: interests on privacy & security, open-source, technology exploration/ testing/ debugging, design systems
+  - title: another list
+    entries:
+      - title: with subitems
+        entries:
+          - title: with subsubitems
+          - title: example page
+            url: about
+  - title: ABOUT
+    entries:
+      - title: CS student and active learner in the CyberSecurity field 
+      - title: penetration tester, security consultant 
+      - title: masterd UI designs and UX research 
+      - title: CP road to 1.5k rating and solving 1k problems at CC
+      - title: active CTF player at HTB, THM, picoCTF
+      - title: known languages HTML, CSS, C, C++, Python, Bash
+      - title: certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy 
+      - title: interests on privacy & security, open-source, technology exploration/ testing/ debugging, design systems
