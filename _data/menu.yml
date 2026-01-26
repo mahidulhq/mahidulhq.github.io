@@ -26,7 +26,7 @@ entries:
 
   - title: byCategory
     post_list:
-      category: example2
+      category: writing
       show_more: true
       show_more_text: See more posts...
       show_more_url: example2-archive.html
