@@ -35,14 +35,14 @@ entries:
   # - title: rss
   #   url: feed.xml
   
-  - title: another list
-    entries:
-      - title: with subitems
-        entries:
-          - title: with subsubitems
-          - title: example page
-            url: about
-  # - title: ABOUT
+  # - title: another list
+  #   entries:
+  #     - title: with subitems
+  #       entries:
+  #         - title: with subsubitems
+  #         - title: example page
+  #           url: about
+  - title: ABOUT
     entries:
       - title: ABOUT
         url: about
