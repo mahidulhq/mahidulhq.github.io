@@ -1,7 +1,7 @@
 ---
 title: "Your Friendly Guide to Terminal Mastery (Linux CLI Commands)"
 date: 2025-08-02 22:00:00 +0600
-categories: [dev]
+categories: [writing]
 ---
 
 I know, I know that black screen with blinking cursor might look intimidating at first, but trust me, once you get the hang of it, you’ll feel like you have superpowers or maybe not :)

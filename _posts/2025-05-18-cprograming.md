@@ -1,7 +1,7 @@
 ---
 title: "C vs C++: A Beginner’s Guide to Syntax and Similarities"
 date: 2025-05-18 22:00:00 +0600
-categories: [dev]
+categories: [writing]
 ---
 
 If you have already started learning C, moving to C++ will feel familiar but it also opens up many more features. C++ was built on top of C, so many parts are the same. But C++ adds extra tools, especially for object-oriented programming.
