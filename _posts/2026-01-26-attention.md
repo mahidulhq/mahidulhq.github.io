@@ -3,6 +3,8 @@ title: "A later to Gen Z"
 date: 2026-01-26 11:04:00 +0600
 categories: [writing]
 ---
+ 
+by Dr. August Bones.
 
 Dear Student,
 
@@ -24,5 +26,4 @@ Finally, use social media on purpose, not by accident. Choose a time for it and 
 
 You will succeed.
 
-from Dr. August Bones '@Ausbones'.
 ---
