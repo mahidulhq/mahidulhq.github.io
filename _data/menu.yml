@@ -5,6 +5,13 @@ entries:
   - title: INTRO
     entries:
       - title: cybersecurity enthusiast, ux/ui designer, tech explorer
+      - text: |
+          Computer Science student with a focused trajectory in cybersecurity, offensive security, and secure system design. Actively building expertise as a penetration tester and security consultant while strengthening foundations in programming, problem solving, and system-level thinking.
+
+          My work sits at the intersection of **security, engineering, and design** — combining technical depth in software and infrastructure with a strong background in UI design and UX research. I approach technology not just as something to build, but something to **break, analyze, optimize, and secure**.
+
+          This space documents what I learn, test, solve, and discover across cybersecurity, competitive programming, open-source tools, and system experimentation.
+
 
   - title: WRITING
     post_list:
@@ -43,11 +50,13 @@ entries:
             url: about
   - title: ABOUT
     entries:
-      - title: CS student and active learner in the CyberSecurity field 
-      - title: penetration tester, security consultant 
-      - title: masterd UI designs and UX research 
-      - title: CP road to 1.5k rating and solving 1k problems at CC
-      - title: active CTF player at HTB, THM, picoCTF
-      - title: known languages HTML, CSS, C, C++, Python, Bash
-      - title: certified by Cisco, Google, Linux Foundation, Grameenphone, Codecademy 
-      - title: interests on privacy & security, open-source, technology exploration/ testing/ debugging, design systems
+      - text: |
+          I am a CS student and active learner in the cybersecurity domain, with hands-on involvement in **penetration testing, security research, and vulnerability exploration**. I regularly practice through CTF platforms including **Hack The Box, TryHackMe, and picoCTF**, treating them as training grounds rather than entertainment.
+          Alongside security, I am deeply engaged in **competitive programming**, working toward a **1.5k CodeChef rating** with over **1,000 problems solved**, sharpening algorithmic thinking and problem-solving discipline.
+
+          My technical toolkit includes:
+          **Languages:** HTML, CSS, C, C++, Python, Bash
+          **Core Areas:** Security testing, debugging, system exploration, design systems, and performance thinking
+
+          I also bring professional experience in **UI/UX design, product design, SEO, and digital product strategy**, which gives me a practical understanding of how real systems are built, used, and often misconfigured.
+          Certifications from **Cisco, Google, Linux Foundation, Grameenphone, and Codecademy** support my formal training, but most of my growth comes from building, breaking, and analyzing real systems.
