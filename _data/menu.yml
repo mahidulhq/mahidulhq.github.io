@@ -24,9 +24,9 @@ entries:
   #     - title: facebook
   #       url: https://www.facebook.com/mahidulhq.page/
 
-  - title: byCategory
+  - title: LITERARY DIARY
     post_list:
-      category: writing
+      category: diary
       show_more: true
       show_more_text: See more posts...
       show_more_url: example2-archive.html
