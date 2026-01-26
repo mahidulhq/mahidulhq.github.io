@@ -42,10 +42,10 @@ entries:
   #         - title: with subsubitems
   #         - title: example page
   #           url: about
-  - title: ABOUT
+  # - title: ABOUT
     entries:
       - title: ABOUT
-        url: about
+        url: /about/
       # - text: 
       #     I am a CS student and active learner in the cybersecurity domain, with hands-on involvement in **penetration testing, security research, and vulnerability exploration**. I regularly practice through CTF platforms including **Hack The Box, TryHackMe, and picoCTF**, treating them as training grounds rather than entertainment.
       #     Alongside security, I am deeply engaged in **competitive programming**, working toward a **1.5k CodeChef rating** with over **1,000 problems solved**, sharpening algorithmic thinking and problem-solving discipline.
