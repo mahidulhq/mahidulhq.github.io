@@ -22,6 +22,14 @@ entries:
       show_more_text: more posts...
       show_more_url: writing-archive.html
 
+  - title: WRITE-UPS
+    post_list:
+      limit: 3
+      category: writeup
+      show_more: true
+      show_more_text: more posts...
+      show_more_url: writing-archive.html
+
   # - title: SOCIAL
   #   entries:
   #     - title: github
