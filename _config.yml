@@ -28,6 +28,12 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jektex
+  - jekyll-analytics
+
+jekyll_analytics:
+  GoogleAnalytics:
+    id: 'G-DT040K4BMP'  # Your GA4 measurement ID
+    anonymizeIp: true
 
 jektex:
   cache_dir: ".jektex-cache"
