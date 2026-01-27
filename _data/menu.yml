@@ -28,7 +28,7 @@ entries:
       category: writeup
       show_more: true
       show_more_text: more posts...
-      show_more_url: writing-archive.html
+      show_more_url: writeup-archive.html
 
   # - title: SOCIAL
   #   entries:
