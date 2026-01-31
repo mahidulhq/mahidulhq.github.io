@@ -9,5 +9,6 @@ gem "bigdecimal"
 gem "base64"
 gem "logger"
 gem "jekyll-analytics"
+gem 'jekyll-seo-tag'
 
 gemspec
