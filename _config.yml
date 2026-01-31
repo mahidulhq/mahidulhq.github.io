@@ -11,6 +11,13 @@ permalink: /:slug.html
 favicon: "logo.png" # name+extension of favicon (which must be put on the root folder)
 # goat_counter: "yoursitename" # put your GoatCounter name if you want to use GoatCounter analytics
 
+social:
+  name: Mahidul Haque
+  links:
+    - https://twitter.com/mahidulhq
+    - https://www.facebook.com/mahidulhq
+    - https://www.linkedin.com/in/mahidulhq
+    - https://github.com/mahidulhq
 
 remote_theme: riggraz/no-style-please # if you are using GitHub Pages, change it to remote_theme: riggraz/no-style-please
 
