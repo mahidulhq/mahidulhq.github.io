@@ -1,6 +1,6 @@
 ---
 title: "Subnetting Practice Problem"
-date: 2025-01-09 17:08:00 +0600
+date: 2025-02-09 19:08:00 +0600
 categories: [writing]
 ---
 Given the network 192.168.1.0/24 (subnet mask 255.255.255.0, supporting 254 hosts), subnet it to create segments where each subnet supports exactly 30 usable hosts. Provide the new subnet mask, number of subnets, and details for all resulting subnets (network address, host range, broadcast)
