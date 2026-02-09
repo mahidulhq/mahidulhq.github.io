@@ -1,6 +1,6 @@
 ---
 title: "Quick Subnetting NOTE"
-date: 2025-02-09 19:00:00 +0600
+date: 2026-02-09 19:00:00 +0600
 categories: [writing]
 ---
 
