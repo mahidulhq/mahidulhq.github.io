@@ -43,10 +43,11 @@ entries:
 
   - title: LITERARY DIARY
     post_list:
+      limit: 3
       category: diary
       show_more: true
       show_more_text: more posts...
-      show_more_url: diary-archive.html
+      show_more_url: diary-archive.md
 
   # - title: rss
   #   url: feed.xml
