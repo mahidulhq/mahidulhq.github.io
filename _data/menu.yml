@@ -47,7 +47,7 @@ entries:
       category: diary
       show_more: true
       show_more_text: more posts...
-      show_more_url: diary-archive.md
+      show_more_url: diary-archive.html
 
   # - title: rss
   #   url: feed.xml
