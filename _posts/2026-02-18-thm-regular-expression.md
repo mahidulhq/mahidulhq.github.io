@@ -64,15 +64,15 @@ Of course, you can exclude charsets, not just single characters.
 
 To reiterate, **there cannot be one single correct solution**. So if you've tested your solution and it works, you can take a break and come back to it later, or ask for a hint in discord, but try not to get frustrated.
 
-1. Match all of the following characters: c, o, g
+1. Match all of the following characters: c, o, g  
 ANS: `[cog]`  
-2. Match all of the following words: cat, fat, hat
+2. Match all of the following words: cat, fat, hat  
 ANS: `[cfh]at`  
-3. Match all of the following words: Cat, cat, Hat, hat
+3. Match all of the following words: Cat, cat, Hat, hat   
 ANS:  `[CcHh]at`  
-4. Match all of the following filenames: File1, File2, file3, file4, file5, File7, file9
+4. Match all of the following filenames: File1, File2, file3, file4, file5, File7, file9  
 ANS: `[Ff]ile[1-9]`
-5. Match all of the filenames of question 4, except "File7" (use the hat symbol)
+5. Match all of the filenames of question 4, except "File7" (use the hat symbol)  
 ANS: `[Ff]ile[^7]`
 
 ***TASK 3:***  Wildcards and optional characters  
@@ -93,7 +93,7 @@ ANS: `cat\.xyz`
 ANS: `[ch]ats?\.xyz`  
 5. Match every 4-letter string that doesn't end in any letter from n to z  
 ANS: `...[^n-z]`  
-6. Match bat, bats, hat, hats, but not rat or rats (use the hat symbol)  
+6. Match bat, bats, hat, hats, but not rat or rats (use the hat symbol)   
 ANS: `[^r]ats?`  
 
 ***TASK 4:***  Metacharacters and repetitions  
@@ -118,25 +118,25 @@ Here's a reference for each repetition along with how many times it matches the 
 `*` - **0 or more** times.  
 `+` - **1 or more** times.
 
-1. Match the following word: catssss
+1. Match the following word: catssss  
 ANS: `cats{4}`
-2. Match all of the following words (use the * sign): Cat, cats, catsss
+2. Match all of the following words (use the * sign): Cat, cats, catsss  
 ANS: `[Cc]ats*`
-3. Match all of the following sentences (use the + sign): regex go br, regex go brrrrrr
+3. Match all of the following sentences (use the + sign): regex go br, regex go brrrrrr  
 ANS:  `regex go br+`
-4. Match all of the following filenames: ab0001, bb0000, abc1000, cba0110, c0000 (don't use a metacharacter)
+4. Match all of the following filenames: ab0001, bb0000, abc1000, cba0110, c0000 (don't use a metacharacter)   
 ANS:  `[abc]{1,3}[01]{4}`
-5. Match all of the following filenames: File01, File2, file12, File20, File99
+5. Match all of the following filenames: File01, File2, file12, File20, File99   
 ANS: `[Ff]ile\d{1,2}`
-6. Match all of the following folder names: kali tools, kali     tools
+6. Match all of the following folder names: kali tools, kali     tools  
 ANS: `kali\s+tools`
-7. Match all of the following filenames: notes~, stuff@, gtfob#, lmaoo!
+7. Match all of the following filenames: notes~, stuff@, gtfob#, lmaoo!   
 ANS: `\w{5}\W`
-8. Match the string in quotes (use the * sign and the \s, \S metacharacters): "2f0h@f0j0%!     a)K!F49h!FFOK"
+8. Match the string in quotes (use the * sign and the \s, \S metacharacters): "2f0h@f0j0%!     a)K!F49h!FFOK"  
 ANS: `\S*\s*\S*`
-9. Match every 9-character string (with letters, numbers, and symbols) that doesn't end in a "!" sign
+9. Match every 9-character string (with letters, numbers, and symbols) that doesn't end in a "!" sign  
 ANS: `\S{8}[^!]`
-10. Match all of these filenames (use the + symbol): .bash_rc, .unnecessarily_long_filename, and note1
+10. Match all of these filenames (use the + symbol): .bash_rc, .unnecessarily_long_filename, and note1  
 ANS:  `\.?\w+`  
 
 ***TASK 5:***   Starts with/ ends with, groups, and either/ or  
@@ -155,25 +155,25 @@ You can also define groups by enclosing a pattern in `(`parentheses`)`. This fu
 For an "either/or" pattern example, the pattern `during the (day|night)` will match both of these sentences: `during the day` and `during the night`.  
 For a repetition example, the pattern `(no){5}` will match the sentence `nonononono`.
 
-1. Match every string that starts with "Password:" followed by any 10 characters excluding "0", irrespective of the position.
+1. Match every string that starts with "Password:" followed by any 10 characters excluding "0", irrespective of the position.  
 ANS:  `Password:[^0]{10}`
-2. Match "username: " in the beginning of a line (note the space!)
+2. Match "username: " in the beginning of a line (note the space!)  
 ANS: `^username:\s`
-3. Match every line that doesn't start with a digit (use a metacharacter)
+3. Match every line that doesn't start with a digit (use a metacharacter)  
 ANS: `^\D`
-4. Match this string at the end of a line: EOF$
+4. Match this string at the end of a line: EOF$  
 ANS: `EOF\$$`
 5. Match all of the following sentences:
 
 - I use nano
-- I use vim
+- I use vim  
 ANS: `I use (nano|vim)`
 6. Match all lines that start with $, followed by any single digit,  
-followed by $, followed by one or more non-whitespace characters
+followed by $, followed by one or more non-whitespace characters  
 ANS: `\$\d\$\S+`
-7. Match every possible IPv4 IP address (use metacharacters and groups)
+7. Match every possible IPv4 IP address (use metacharacters and groups)  
 ANS: `(\d{1,3}\.){3}\d{1,3}`
-8. Match all of these emails while also adding the username and the domain name (not the TLD) in separate groups (use \w): [hello@tryhackme.com](mailto:hello@tryhackme.com), [username@domain.com](mailto:username@domain.com), [dummy_email@xyz.com](mailto:dummy_email@xyz.com)
+8. Match all of these emails while also adding the username and the domain name (not the TLD) in separate groups (use \w): [hello@tryhackme.com](mailto:hello@tryhackme.com), [username@domain.com](mailto:username@domain.com), [dummy_email@xyz.com](mailto:dummy_email@xyz.com)  
 ANS: `(\w+)@(\w+)\.com`  
 
 ***Conclusion***  
