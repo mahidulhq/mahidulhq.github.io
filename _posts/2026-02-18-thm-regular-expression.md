@@ -1,6 +1,6 @@
 ---
 title: "THM - Regular Expressions"
-date: 2026-02-18 20:49:00 +0600
+date: 2026-02-18 02:49:00 +0600
 categories: [writeup]
 ---
 
