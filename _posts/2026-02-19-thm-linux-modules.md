@@ -493,3 +493,118 @@ cat sed2.txt | tr -d '[:digit:]'
 6. What did she sed?(In double quotes)   
 ANS: `"That's What"`  
 
+###### ****Task 8: xargs****  
+
+Download Task Files
+
+﻿xargs, a very simple command to use when it comes to make passed string a command's argument, technically, positional argument. The official documentation says, xargs is a command line tool used to build and execute command from the standard input. 
+
+Important flags  
+
+|   |   |
+|---|---|
+|Flags|Description|
+|-0|Will terminate the arguments with null character (helps to handle spaces in the argument)|
+|-a file|This option allows xargs to read item from a file|
+|-d delimiter|To specify the delimiter to be used when differentiating arguments in stdin|
+|-L int|Specifies max number non-blank inputs per command line|
+|-s int|Consider this as a buffer size that you allocate while running xargs, it sets the max-chars for the command, which includes it's initial arguments and terminating nulls as well.(You won't be using this most of the times but it's good to know). Default size is around 128kB (if not specified).|
+|-x|This flag will exit the command execution if the size specified is exceeded.(For security purposes.)|
+|-E str|This is to specify the end-of-file string (You can use this in case you are reading arguments from a file)|
+|-I str|(Capital i) Used to replace str occurrence in arguments with the one passed via stdin(More like creating a variable to use later)|
+|-p|prompt the user before running any command as a token of confirmation.|
+|-r|If the standard input is blank (i.e. no arguments passed) then it won't run the command.|
+|-n int|This specifies the limit of max-args to be taken from command input at once. After the max-args limit is reached, it will pass the rest arguments into a new command line with the same flags issued to the previously ran command. (More like a looping)|
+|-t|verbose; (Print the command before running it).Note: This won't ask for a prompt|
+
+﻿xargs packs with a very large option of flags, although, a very simple tool to work with. You don't have to stress too much on xargs, it is just a small tool like sort, uniq (Coming soon). Go through the following examples and then I have a useful note, _on using flags as a positional arguments._
+
+﻿Examples
+
+- What if we want to run multiple command with xargs in one line.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/c4e4a6b6486f7e362139afb87a2cae6c.png)  
+
+You can see I defined a variable _argVar_ to use later in the 2 commands I ran with `bash -c`.
+
+- You can use xargs with conjunction to find command to enhance the search results.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/e32dea6d1d1bb15264a5d3c157ec3dde.png)  
+
+Note: The find command prints results to standard output by default, so the `-print` option is normally not needed, but `-print0` separates the filenames with a \0 (NULL) byte so that names containing spaces or newlines can be interpreted correctly.
+
+- You can use xargs command to grep a text from any file in any directory meeting a specific pattern/criteria.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/489835f044ee5037c8962fe0421133cb.png)  
+
+You can see that I used xargs to grep a pattern matching anything starting with r with any bunch of characters[:alnum:] and ending with 0. Which returned me this string. If you want to practice on your own, you can find flag.txt file inside the downloaded zip archive. Pick a string find a unique pattern for it and then grep it. Peace.
+
+Note: If the xargs is having same flags, that can also be interpreted by the following module, in that case you need not worry, because the flags used after the command are the one's that are interpreted. Just keep that in mind and you're good to go.
+
+A note on XARGS (and almost every command line module in linux/unix system)
+
+Let's take an example from one of the rooms I solved on privilege escalating through tar running as super user. Room: [Linux PrivEsc | Task 10](https://tryhackme.com/room/linuxprivesc)
+
+Gtfobins said, "tar -cf /dev/null /dev/null --checkpoint=1 --checkpoint-action=exec=/bin/sh"
+
+Great, but the catch in the challenge was, sudo was not given to tar, SUID permissions were given to a file, which was not allowed to be edited by any other user(owner: root). So if that script has to run it will run with the root privileges. What we could do is make the files in that directory in flag format, that tar could interpret as it's flag. So when in our case, tar would start scanning the directory to get the overview of the files to compress and combine them, it will interpret those flags and will give us root shell.
+
+Awesome technique. Isn't it? Well that's not the point. The point here is, I found a little difficulty in creating those files (via command line) with -- appended to them. I tried xargs but didn't work. I then found an article [here](https://www.hackingarticles.in/exploiting-wildcard-for-privilege-escalation/), which helped me and I solved the challenge. Then when I started with the 5th phase of hacking(Covering Tracks). I couldn't seem to delete those earlier created `--checkpoint` files with `rm`. I tried for an hour or so, but couldn't and left. Well, I didn't knew this, until I started reading documentations and man pages. Call it an instinct or just luck that I found a way to _escape command line flags as a positional argument_. Why all this theory, when I can simply get to this point? Well, I believe that it's just a better way of learning, when you can append your learnings with an event that had previously occurred. So later, I was able to remove the files using the following command.
+
+`rm -- --checkpoint=1`
+
+`rm -- --checkpoint-action=exec=sh`
+
+Notice something different? I was able to escape the following flags using an empty flag notation. Infact. This padding technique works in ALMOST EVERY command line module available for linux, unix systems. Let's see this in action with xargs, and know that if this theory actually works.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/dbca3dd790522bc5ad41d029eb1d0438.png)  
+
+You can see the rm didn't interpreted the files inside directory as a flag when used -- padding. Also before we move forward, I want to show one more thing...
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/56c12a40e728ceec66d060b49d81b4f3.png)  
+
+Wutt? I gave the padding it still showed me an error. Hmm... Did you found what was the issue? Well even if you specify that padding to escape the flags there are '/'s inside this string, which are making `touch` to interpret them as create the file _bash_, inside _bin_ directory that is inside, some _--checkpoint-action=exec=_ directory. You may try using \/bin\/bash to escape the slashes, but that won't work either, because files can't contain slashes in their name.
+
+We can easily bypass this by just using bash or sh instead of specifying the whole path, but make sure that your path is set to normal. Moving forward...
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/9ed0f42497cf60ccaf17ffdcf31c7f11.png)  
+
+Focus on the -n2 I used after xargs. 2 arguments at once, in first loop `touch -- --checkpoint=1`, then `touch -- --checkpoint-action=exec=sh`. Now let's try running tar.
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/096f4bc5dc58bb2a15089e56827a1e32.png)  
+
+Ohh ok, I see where the problem occurred, those 2 flag files that we created were interpreted as flags and then tar had nothing to compress, that's not a problem, let's create a testfile...
+
+![](https://tryhackme-images.s3.amazonaws.com/user-uploads/5eff6381a8b8f6323ba744fe/room-content/63da13df61e7212d410ec4bdf7a99373.png)  
+
+Bingo, we got a shell(not as root, because that was executed as my user. Could give us root, if ran as it).
+
+Hope this last was a good example on xargs usage. Remember, xargs is a great command when it comes to handling command line arguments. It's not a very vast tool which you could dive in. Though it has max-ly covered all the areas in it's domain of passing and handling arguments to other modules/commands. Like a sidekick, this can help you ease your daily tasks. So keep a space for this tool in your arsenal.
+
+Read the above.
+
+
+1. You're working in a team and your team leader sent you a list of files that needs to be created ASAP within current directory so that he can fake the synopsis report (that needs to be submitted within a minute or 2) to the invigilator and change the permissions to read-only to only you(Numberic representation). You can find the files list in the "one" folder.  
+
+Use the following flags in ASCII order:
+
+- Verbose
+- Take argument as "files"    
+ANS: `cat file | xargs -I files -t sh -c "touch files; chmod 400 files"`  
+
+Your friend trying to run multiple commands in one line, and wanting to create a short version of rockyou.txt, messed up by creating files instead of redirecting the output into "shortrockyou". Now he messed up his home directory by creating a ton of files. He deleted rockyou wordlist in that one liner and can't seem to download it and do all that long process again.
+
+He now seeks help from you, to create the wordlist and remove those extra files in his directory. You being a pro in linux, show him how it's done in one liner way.
+
+Use the following flags in ASCII order:
+
+- Take argument as "word"
+- Verbose
+- Max number of arguments should be 1 in for each file
+
+2. You can find the files for this task in two folder.   
+ANS: `ls | xargs -I word -n 1 -t sh -c 'echo word >> shortrockyou; rm word'`  
+3. Which flag to use to specify max number of arguments in one line.  
+ANS: `-n`   
+4. How will you escape command line flags to positional arguments?  
+ANS: `--`  
