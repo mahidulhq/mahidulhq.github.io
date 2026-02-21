@@ -314,3 +314,5 @@ then open another tab login and run the exploit that we made and named `script.p
 
 ![[Pasted image 20260221091714.png]]
 we got the flag.
+
+
