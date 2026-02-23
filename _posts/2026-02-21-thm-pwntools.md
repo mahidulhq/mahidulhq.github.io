@@ -365,13 +365,13 @@ TL;DR
 run exploit  you'll get `Trace/breakpoint trap`  
 ### 6. Run the command "shellcraft i386.linux.sh -f a", which will print our shellcode in assembly format. The first line will tell you that it is running a function from the Unix standard library, with the parameters of "(path='/bin///sh', argv=['sh'], envp=0)." What function is it using?
 ### Process  
-TL;DR
+TL;DR  
 `execve`  
 ### 7. Run whoami once you have the shell. Who are you?  
 ### Process  
-TL;DR  
+TL;DR   
 `root`   
 ### 8. What is the flag?  
 ### Process  
-
+TL;DR  
 `flag{pwn!ng_!$_fr33d0m}`  
