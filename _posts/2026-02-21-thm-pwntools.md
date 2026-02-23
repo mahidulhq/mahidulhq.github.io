@@ -11,7 +11,8 @@ TryHackMe's "Intro to Pwntools" room introduces binary exploitation fundamentals
 ### Process
 check with `checksec intro2pwn1`    
 
-![image](/assets/images/screenshots/1027.jpg)
+![image](/assets/images/screenshots/1027.jpg)  
+
 result shows `RELRO: Full RELRO` which mean Yes.
 
 > [!NOTE]
@@ -29,7 +30,8 @@ result shows `RELRO: Full RELRO` which mean Yes.
 ### Process
 check with `checksec intro2pwn1`    
 
-![image](/assets/images/screenshots/1027.jpg)
+![image](/assets/images/screenshots/1027.jpg)  
+
 On the result there is no RWX showed which mean No.
 
 > [!NOTE]
@@ -48,8 +50,8 @@ The result shows `Stack: No canary found` , so answer is No.
 > ## What is a Stack Canary
 > 
 > A stack canary (or guard) is a random value placed on the stack between local variables and the return address to detect buffer overflows. Before function return, the program verifies the canary; if altered, it terminates ("stack smashing detected") to block control-flow hijacking
-### 4. Does Intro2pwn2 not have PIE (Y or N)?
 
+### 4. Does Intro2pwn2 not have PIE (Y or N)?
 ### Process
 check with `checksec intro2pwn2`   
 
@@ -138,9 +140,12 @@ Just run the `cyclic 12` you'll have the output
 ### 5. What pattern, in hex, was the eip overflowed with?
 ### Process
 Generate 200-byte cyclic pattern using `cyclic 200 > pattern.txt` on the terminal. verify the created pattern with `ls` or `ls -ls`.  
-![image](/assets/images/screenshots/1034.jpg)
+![image](/assets/images/screenshots/1034.jpg) 
+
 loaded binary with `gdb -q ./intro2pwn3`  now we have to run with pattern input  
-![image](/assets/images/screenshots/1035.jpg)
+
+![image](/assets/images/screenshots/1035.jpg) 
+
 pattern `0x6161616a`.  
 
 ### 6. What is the flag?
@@ -161,7 +166,8 @@ before run this lets find the location of the `print_flag()` function. To find t
 now edit the exploit file and replace the `0xdeadbeef` with  `0x08048536`.
 And now lets run `python pwn_cyclic.py > attack` this will create a file named `attack` . Lets input the attack file into the intro2pwn3 binary in the command line `./intro2pwn3 < attack` .
 
-![image](/assets/images/screenshots/1037.jpg)
+![image](/assets/images/screenshots/1037.jpg)  
+
 and we get the flag.
 
 > [!NOTE]
@@ -175,12 +181,14 @@ and we get the flag.
 ### Process
 Just read the `.txt` file  
 
-![image](/assets/images/screenshots/1040.jpg)
+![image](/assets/images/screenshots/1040.jpg)  
+
 ### 2. Please use checksec on serve_test. Is there a stack canary? (Y or N)
 ### Process
 Using `checksec` on `serve_test`    
 
-![image](/assets/images/screenshots/1041.jpg)
+![image](/assets/images/screenshots/1041.jpg)  
+
 on the output it says `Stack: Canary found`. Which means Yes.
 ### 3. What is the flag?
 Exploit :  
@@ -309,10 +317,12 @@ print(connect.recvn(34)) # Read response after payload
 
 Lets run this against your server at 1336 ,   
 
-![image](/assets/images/screenshots/1038.jpg)
+![image](/assets/images/screenshots/1038.jpg)  
+
 then open another tab login and run the exploit that we made and named `script.py`   
 
-![image](/assets/images/screenshots/1039.jpg)
+![image](/assets/images/screenshots/1039.jpg)  
+
 we got the flag.
 
 
@@ -335,18 +345,21 @@ Address Space Layout Randomization
 ### Process  
 Use basic command `ls -la` to see file details on the current directory.    
 
-![image](/assets/images/screenshots/1043.jpg)
+![image](/assets/images/screenshots/1043.jpg)  
+
 output shows `root` owns intro2pwnFinal.  
 ### 3. Use checksec on intro2pwn final. Is NX enabled? (Y or N)  
 ### Process  
 Use `checksec` on the file    
 
-![image](/assets/images/screenshots/1044.jpg)
+![image](/assets/images/screenshots/1044.jpg)  
+
 output shows `NS: NX unknown - GNU_STACK missing` so the answer is No.  
 ### 4. Please use the cyclic tool and gdb to find the eip. What letter sequence fills the eip?
 ### Process  
 TL;DR  
-![image](/assets/images/screenshots/1045.jpg)
+![image](/assets/images/screenshots/1045.jpg)  
+
 ### 5. Run your exploit with the breakpoint outside of gdb (./intro2pwnFinal < output_file). What does it say when you hit the breakpoint?
 ### Process  
 run exploit  you'll get `Trace/breakpoint trap`  
