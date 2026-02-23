@@ -11,7 +11,7 @@ TryHackMe's "Intro to Pwntools" room introduces binary exploitation fundamentals
 ### Process
 check with `checksec intro2pwn1`    
 
-![[Pasted image 20260221042326.png]]
+![image](/assets/images/screenshots/1027.jpg)
 result shows `RELRO: Full RELRO` which mean Yes.
 
 > [!NOTE]
@@ -29,7 +29,7 @@ result shows `RELRO: Full RELRO` which mean Yes.
 ### Process
 check with `checksec intro2pwn1`    
 
-![[Pasted image 20260221042326.png]]
+![image](/assets/images/screenshots/1027.jpg)
 On the result there is no RWX showed which mean No.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ On the result there is no RWX showed which mean No.
 ### Process
 check with `checksec intro2pwn2`    
 
-![[Pasted image 20260221042805.png]]
+![image](/assets/images/screenshots/1028.jpg)
 The result shows `Stack: No canary found` , so answer is No.
 
 > [!NOTE]
@@ -53,7 +53,7 @@ The result shows `Stack: No canary found` , so answer is No.
 ### Process
 check with `checksec intro2pwn2`   
 
-![[Pasted image 20260221042805.png]]
+![image](/assets/images/screenshots/1028.jpg)
 
 on the output `PIE: No PIE(0x8048000)` so its a Yes.
 
@@ -71,13 +71,13 @@ on the output `PIE: No PIE(0x8048000)` so its a Yes.
 4. Program greets with the input, then crashes.
 5. What was detected: "stack smashing detected" (*** stack smashing detected ***: terminated) due to canary mismatch.
 
-![[Pasted image 20260221035619.png]]
+![image](/assets/images/screenshots/1025.jpg)
 
 ### 6. Now cause a buffer overflow on intro2pwn2. What error do you get?
 ### Process 
 same as before.
 
-![[Pasted image 20260221035758.png]]
+![image](/assets/images/screenshots/1026.jpg)
 
 ## ***Task 3: Cyclic***    
 
@@ -85,7 +85,7 @@ same as before.
 ### Process
 `ls -l` lists directory contents in long/detailed format on Linux/Unix systems, so lets use this to see file details on this directory.
 
-![[Pasted image 20260221045809.png]]
+![image](/assets/images/screenshots/1029.jpg)
 
 > [!NOTE]
 > Each line shows: file type/permissions (e.g., `-rw-r--r--`), hard links count, owner, group, size (bytes), modification timestamp, and filename. First character indicates type (`-` file, `d` directory, `l` symlink).
@@ -102,7 +102,7 @@ as you can see the flag file and intro2pwn3 are owned by the same user. so the a
 ### Process
 By using `checksec` -  
 
-![[Pasted image 20260221050251.png]]
+![image](/assets/images/screenshots/1030.jpg)
 
 from the result `Canary` (stack canary) protection is missing on intro2pwn3. 
 
@@ -122,7 +122,7 @@ from the result `Canary` (stack canary) protection is missing on intro2pwn3.
 ### Process  
 As the instruction says run `gdb intro2pwn3` to fire up `gdb`. To run a program in gdb, type `r`. You will see the program function normally. If you want to add an input from a text file, you use the "<" key, as such: `r < alphabet` this cause a segmentation fault, and you may observe that there is an invalid address at 0x4a4a4a4a. If you scroll up, you can see the values at each register. For eip, it has been overwritten with `0x4a4a4a4a`.  
 
-![[Pasted image 20260221060421.png]]
+![image](/assets/images/screenshots/1031.jpg)
 
 scroll up or down you'll find the answer.
 
@@ -130,7 +130,7 @@ scroll up or down you'll find the answer.
 ### Process
 Just run the `cyclic 12` you'll have the output
 
-![[Pasted image 20260221061026.png]]
+![image](/assets/images/screenshots/1032.jpg)
 
 > [!NOTE]
 > `pwndbg> cyclic 12` generates a 12-byte unique cyclic pattern like "aaaabaaacaaa" for buffer overflow offset calculation
@@ -138,9 +138,9 @@ Just run the `cyclic 12` you'll have the output
 ### 5. What pattern, in hex, was the eip overflowed with?
 ### Process
 Generate 200-byte cyclic pattern using `cyclic 200 > pattern.txt` on the terminal. verify the created pattern with `ls` or `ls -ls`.  
-![[Pasted image 20260221070626.png]]
+![image](/assets/images/screenshots/1034.jpg)
 loaded binary with `gdb -q ./intro2pwn3`  now we have to run with pattern input  
-![[Pasted image 20260221070838.png]]
+![image](/assets/images/screenshots/1035.jpg)
 pattern `0x6161616a`.  
 
 ### 6. What is the flag?
@@ -156,12 +156,12 @@ print(payload)
 
 before run this lets find the location of the `print_flag()` function. To find the print_flag() funtion, type this command into gdb `print& print_flag`   
 
-![[Pasted image 20260221081754.png]]
+![image](/assets/images/screenshots/1036.jpg)
 
 now edit the exploit file and replace the `0xdeadbeef` with  `0x08048536`.
 And now lets run `python pwn_cyclic.py > attack` this will create a file named `attack` . Lets input the attack file into the intro2pwn3 binary in the command line `./intro2pwn3 < attack` .
 
-![[Pasted image 20260221082139.png]]
+![image](/assets/images/screenshots/1037.jpg)
 and we get the flag.
 
 > [!NOTE]
@@ -175,12 +175,12 @@ and we get the flag.
 ### Process
 Just read the `.txt` file  
 
-![[Pasted image 20260221092014.png]]
+![image](/assets/images/screenshots/1040.jpg)
 ### 2. Please use checksec on serve_test. Is there a stack canary? (Y or N)
 ### Process
 Using `checksec` on `serve_test`    
 
-![[Pasted image 20260221092134.png]]
+![image](/assets/images/screenshots/1041.jpg)
 on the output it says `Stack: Canary found`. Which means Yes.
 ### 3. What is the flag?
 Exploit :  
@@ -309,10 +309,56 @@ print(connect.recvn(34)) # Read response after payload
 
 Lets run this against your server at 1336 ,   
 
-![[Pasted image 20260221091653.png]]
+![image](/assets/images/screenshots/1038.jpg)
 then open another tab login and run the exploit that we made and named `script.py`   
 
-![[Pasted image 20260221091714.png]]
+![image](/assets/images/screenshots/1039.jpg)
 we got the flag.
 
 
+## ***Task 5: Shellcraft     
+
+
+### 1. What does ASLR stand for?  
+### Process  
+Address Space Layout Randomization  
+
+> [!NOTE]
+> **Address Space Layout Randomization (ASLR)** randomly positions key memory regions (stack, heap, libraries, executable base) each time a program runs.
+> 
+> #### Purpose of ASLR
+> 
+> Prevents buffer overflow exploits that rely on predictable memory addresses. Without ASLR, attackers know exactly where `print_flag()` lives (like `0x08048536`). With ASLR, that address changes every execution, breaking your `p32(0x08048536)` payload.
+
+## Impact on Your Exploit  
+### 2. Who owns intro2pwnFinal?  
+### Process  
+Use basic command `ls -la` to see file details on the current directory.    
+
+![image](/assets/images/screenshots/1043.jpg)
+output shows `root` owns intro2pwnFinal.  
+### 3. Use checksec on intro2pwn final. Is NX enabled? (Y or N)  
+### Process  
+Use `checksec` on the file    
+
+![image](/assets/images/screenshots/1044.jpg)
+output shows `NS: NX unknown - GNU_STACK missing` so the answer is No.  
+### 4. Please use the cyclic tool and gdb to find the eip. What letter sequence fills the eip?
+### Process  
+TL;DR  
+![image](/assets/images/screenshots/1045.jpg)
+### 5. Run your exploit with the breakpoint outside of gdb (./intro2pwnFinal < output_file). What does it say when you hit the breakpoint?
+### Process  
+run exploit  you'll get `Trace/breakpoint trap`  
+### 6. Run the command "shellcraft i386.linux.sh -f a", which will print our shellcode in assembly format. The first line will tell you that it is running a function from the Unix standard library, with the parameters of "(path='/bin///sh', argv=['sh'], envp=0)." What function is it using?
+### Process  
+TL;DR
+`execve`  
+### 7. Run whoami once you have the shell. Who are you?  
+### Process  
+TL;DR  
+`root`   
+### 8. What is the flag?  
+### Process  
+
+`flag{pwn!ng_!$_fr33d0m}`  
