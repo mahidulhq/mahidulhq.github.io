@@ -11,8 +11,13 @@ layout: default
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
-<footer class="footer">
+<!-- <footer class="footer">
     <div class="w">
         <p style="font-size: 0.6em; margin-top: 2em;">&copy; {{ 'now' | date: '%Y' }} {{ site.title | default: site.name }}. All rights reserved.</p>
+    </div>
+</footer> -->
+<footer class="footer">
+    <div style="text-align: left; padding: 0 1rem;">
+        <p style="font-size: 0.8em; margin-top: 2em;">&copy; {{ 'now' | date: '%Y' }} {{ site.title | default: site.name }}. All rights reserved.</p>
     </div>
 </footer>
