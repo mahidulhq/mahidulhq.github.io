@@ -1,0 +1,15 @@
+.social-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.social-links a {
+  font-size: 1.5rem;
+  color: #666;
+  transition: all 0.3s ease;
+}
+.social-links a:hover {
+  color: #007bff;
+  transform: scale(1.1);
+}
