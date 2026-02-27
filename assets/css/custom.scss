@@ -1,0 +1,15 @@
+---
+---
+
+/* Make social links horizontal */
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Remove vertical spacing */
+.social-links li {
+  margin: 0;
+  list-style: none;
+}
