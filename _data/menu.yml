@@ -48,11 +48,6 @@ entries:
   #         - title: with subsubitems
   #         - title: example page
   #           url: about
-  - title: ABOUT
-    entries:
-      - title: mahidulhq
-        url: about
-
   - title: SOCIAL
     entries:
       - title: github
@@ -63,3 +58,8 @@ entries:
         url: https://x.com/mahidulhq
       - title: facebook
         url: https://www.facebook.com/mahidulhq.page/
+  
+  - title: ABOUT
+    entries:
+      - title: mahidulhq
+        url: about
