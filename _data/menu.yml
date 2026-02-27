@@ -49,6 +49,7 @@ entries:
   #         - title: example page
   #           url: about
   - title: SOCIAL
+    entries_class: social-links
     entries:
       - title: github
         url: https://github.com/mahidulhq

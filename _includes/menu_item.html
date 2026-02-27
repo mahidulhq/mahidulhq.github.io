@@ -1,4 +1,4 @@
-<ul>
+<ul{%- if include.class %} class="{{ include.class }}"{% endif %}>
   {%-for item in include.collection-%}
     <li>
     {%- if item.url -%}
@@ -20,7 +20,7 @@
     {%-endif-%}
 
     {%-if item.entries-%}
-      {%-include menu_item.html collection=item.entries-%}
+      {%-include menu_item.html collection=item.entries class=item.entries_class-%}
     {%-endif-%}
   {%-endfor-%}
 </ul>
