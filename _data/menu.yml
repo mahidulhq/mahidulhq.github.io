@@ -30,17 +30,6 @@ entries:
       show_more_text: more posts...
       show_more_url: writeup-archive.html
 
-  # - title: SOCIAL
-  #   entries:
-  #     - title: github
-  #       url: https://github.com/mahidulhq
-  #     - title: linkedin
-  #       url: https://www.linkedin.com/in/mahidulhq/
-  #     - title: x
-  #       url: https://x.com/mahidulhq
-  #     - title: facebook
-  #       url: https://www.facebook.com/mahidulhq.page/
-
   - title: LITERARY DIARY
     post_list:
       limit: 3
@@ -63,3 +52,14 @@ entries:
     entries:
       - title: mahidulhq
         url: about
+
+  - title: SOCIAL
+    entries:
+      - title: github
+        url: https://github.com/mahidulhq
+      - title: linkedin
+        url: https://www.linkedin.com/in/mahidulhq/
+      - title: x
+        url: https://x.com/mahidulhq
+      - title: facebook
+        url: https://www.facebook.com/mahidulhq.page/

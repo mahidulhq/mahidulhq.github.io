@@ -17,16 +17,6 @@
         <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}.js"></script>
       {% endfor %}
     {% endif %}
-    <!-- SOCIAL ICONS -->
-<div style="text-align: center; padding: 10px 0; background: #ffffff; margin-top: 40px;">
-  {% for link in site.social.links %}
-    {% if link contains 'github.com' %}<a href="{{ link }}" style="margin: 0 15px; font-size: 28px; color: #333; text-decoration: none;" target="_blank"><i class="fab fa-github"></i></a>{% endif %}
-    {% if link contains 'linkedin.com' %}<a href="{{ link }}" style="margin: 0 15px; font-size: 28px; color: #0077b5; text-decoration: none;" target="_blank"><i class="fab fa-linkedin"></i></a>{% endif %}
-    {% if link contains 'facebook.com' %}<a href="{{ link }}" style="margin: 0 15px; font-size: 28px; color: #1877f2; text-decoration: none;" target="_blank"><i class="fab fa-facebook-f"></i></a>{% endif %}
-    {% if link contains 'x.com' %}<a href="{{ link }}" style="margin: 0 15px; font-size: 28px; color: #000; text-decoration: none;" target="_blank"><i class="fab fa-x-twitter"></i></a>{% endif %}
-  {% endfor %}
-</div>
-
   </body>
       <!-- <footer class="footer">
       <div class="w">
