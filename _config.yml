@@ -49,3 +49,5 @@ jektex:
   macros:
     - ["\\Q", "\\mathbb{Q}"]
     - ["\\C", "\\mathbb{C}"]
+
+copyright: "© 2026 Mahidul Haque. All rights reserved."
