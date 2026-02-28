@@ -1,5 +1,5 @@
 ---
-title: "THM - SOC Fundamentals"
+title: "THM - The Hacker Methodology"
 date: 2026-03-01 01:23:00 +0600
 categories: [writeup]
 ---
