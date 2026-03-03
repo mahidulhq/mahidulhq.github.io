@@ -7,8 +7,6 @@ layout: default
 <article>
   <p class="post-meta">
     <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
-    &nbsp;·&nbsp;
-    {% assign reading_time = content | number_of_words | divided_by: 200 | at_least: 1 %}{{ reading_time }} min read
   </p>
   
   <h1>{{ page.title }}</h1>
