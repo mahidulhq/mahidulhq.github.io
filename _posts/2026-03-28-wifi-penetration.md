@@ -1,6 +1,6 @@
 ---
 title: "WiFi Penetration Testing (minimal draft)"
-date: 2026-03-14 00:20:00 +0600
+date: 2026-03-28 23:39:00 +0600
 categories: [writing]
 ---
 
