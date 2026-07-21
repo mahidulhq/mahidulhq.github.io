@@ -4,8 +4,6 @@ date: 2026-07-22 00:23:13 +0600
 categories: [writeup]
 ---
 
-# TryHackMe — Fool's Mate Write-up
-
 ## Executive Summary
 - **Room:** Fool's Mate
 - **Platform:** TryHackMe
