@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Project Showcase 01 - keeylogger
+title: Keyboard input monitor tool - 'keeylogger'
 category: projects
 ---
 
