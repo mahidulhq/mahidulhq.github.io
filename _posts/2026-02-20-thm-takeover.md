@@ -4,6 +4,10 @@ date: 2026-02-20 01:03:00 +0600
 categories: [writeup]
 ---
 
+## Index <!-- omit in toc -->
+- [***Task 1: Help Us***] (#task-1-help-us)
+
+<a id="task-1-help-us"></a>
 ###### ***Task 1: Help Us***  
 Hello there,  
   

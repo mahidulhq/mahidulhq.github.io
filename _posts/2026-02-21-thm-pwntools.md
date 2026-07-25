@@ -3,11 +3,70 @@ title: "THM - Intro To Pwntools"
 date: 2026-02-21 09:26:00 +0600
 categories: [writeup]
 ---
+
+## Index <!-- omit in toc -->
+- [***Task 1: Introduction***] (#task-1-introduction)
+- [***Task 2: Checksec***] (#task-2-checksec)
+- [1. Does Intro2pwn1 have FULL RELRO (Y or N)?] (#1-does-intro2pwn1-have-full-relro-y-or-n)
+- [Process] (#process)
+- [2. Does Intro2pwn1 have RWX segments (Y or N)?] (#2-does-intro2pwn1-have-rwx-segments-y-or-n)
+- [Process] (#process)
+- [3. Does Intro2pwn2 have a stack canary (Y or N)?] (#3-does-intro2pwn2-have-a-stack-canary-y-or-n)
+- [Process] (#process)
+- [4. Does Intro2pwn2 not have PIE (Y or N)?] (#4-does-intro2pwn2-not-have-pie-y-or-n)
+- [Process] (#process)
+- [5. Cause a buffer overflow on intro2pwn1 by inputting a long string such as AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA. What was detected?] (#5-cause-a-buffer-overflow-on-intro2pwn1-by-inputting-a-long-string-such-as-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-what-was-detected)
+- [Process] (#process)
+- [6. Now cause a buffer overflow on intro2pwn2. What error do you get?] (#6-now-cause-a-buffer-overflow-on-intro2pwn2-what-error-do-you-get)
+- [Process] (#process)
+- [***Task 3: Cyclic***] (#task-3-cyclic)
+- [1. Which user owns both the flag.txt and intro2pwn3 file?] (#1-which-user-owns-both-the-flagtxt-and-intro2pwn3-file)
+- [Process] (#process)
+- [2. Use checksec on intro2pwn3. What bird-themed protection is missing?] (#2-use-checksec-on-intro2pwn3-what-bird-themed-protection-is-missing)
+- [Process] (#process)
+- [3. What ascii letter sequence is 0x4a4a4a4a (pwndbg should tell you).] (#3-what-ascii-letter-sequence-is-0x4a4a4a4a-pwndbg-should-tell-you)
+- [Process] (#process)
+- [4. What is the output of "cyclic 12"?] (#4-what-is-the-output-of-cyclic-12)
+- [Process] (#process)
+- [5. What pattern, in hex, was the eip overflowed with?] (#5-what-pattern-in-hex-was-the-eip-overflowed-with)
+- [Process] (#process)
+- [6. What is the flag?] (#6-what-is-the-flag)
+- [Process] (#process)
+- [***Task 4: Networking***] (#task-4-networking)
+- [1. What port is serving our challenge?] (#1-what-port-is-serving-our-challenge)
+- [Process] (#process)
+- [2. Please use checksec on serve_test. Is there a stack canary? (Y or N)] (#2-please-use-checksec-on-serve_test-is-there-a-stack-canary-y-or-n)
+- [Process] (#process)
+- [3. What is the flag?] (#3-what-is-the-flag)
+- [Process] (#process)
+- [***Task 5: Shellcraft] (#task-5-shellcraft)
+- [1. What does ASLR stand for?] (#1-what-does-aslr-stand-for)
+- [Process] (#process)
+- [Impact on Your Exploit] (#impact-on-your-exploit)
+- [2. Who owns intro2pwnFinal?] (#2-who-owns-intro2pwnfinal)
+- [Process] (#process)
+- [3. Use checksec on intro2pwn final. Is NX enabled? (Y or N)] (#3-use-checksec-on-intro2pwn-final-is-nx-enabled-y-or-n)
+- [Process] (#process)
+- [4. Please use the cyclic tool and gdb to find the eip. What letter sequence fills the eip?] (#4-please-use-the-cyclic-tool-and-gdb-to-find-the-eip-what-letter-sequence-fills-the-eip)
+- [Process] (#process)
+- [5. Run your exploit with the breakpoint outside of gdb (./intro2pwnFinal < output_file). What does it say when you hit the breakpoint?] (#5-run-your-exploit-with-the-breakpoint-outside-of-gdb-intro2pwnfinal-output_file-what-does-it-say-when-you-hit-the-breakpoint)
+- [Process] (#process)
+- [6. Run the command "shellcraft i386.linux.sh -f a", which will print our shellcode in assembly format. The first line will tell you that it is running a function from the Unix standard library, with the parameters of "(path='/bin///sh', argv=['sh'], envp=0)." What function is it using?] (#6-run-the-command-shellcraft-i386linuxsh-f-a-which-will-print-our-shellcode-in-assembly-format-the-first-line-will-tell-you-that-it-is-running-a-function-from-the-unix-standard-library-with-the-parameters-of-pathbinsh-argvsh-envp0-what-function-is-it-using)
+- [Process] (#process)
+- [7. Run whoami once you have the shell. Who are you?] (#7-run-whoami-once-you-have-the-shell-who-are-you)
+- [Process] (#process)
+- [8. What is the flag?] (#8-what-is-the-flag)
+- [Process] (#process)
+
+<a id="task-1-introduction"></a>
 ## ***Task 1: Introduction***    
 
 TryHackMe's "Intro to Pwntools" room introduces binary exploitation fundamentals using three ELF binaries: intro2pwn1, intro2pwn2, and intro2pwn3. This writeup covers analyzing protections via checksec, triggering buffer overflows, and progressing through pwn challenges on a vulnerable Linux VM. Key concepts include RELRO, stack canaries, NX, PIE, RWX segments, and pwntools scripting for automation.
+<a id="task-2-checksec"></a>
 ## ***Task 2: Checksec***   
+<a id="1-does-intro2pwn1-have-full-relro-y-or-n"></a>
 ### 1. Does Intro2pwn1 have FULL RELRO (Y or N)?
+<a id="process"></a>
 ### Process
 check with `checksec intro2pwn1`    
 
@@ -25,8 +84,10 @@ result shows `RELRO: Full RELRO` which mean Yes.
 > 
 > RELRO (Relocation Read-Only) protects the Global Offset Table (GOT) from overwrites in binary exploits. Partial RELRO marks non-PLT GOT entries read-only (default GCC); Full RELRO makes the entire GOT read-only but slows startup by pre-resolving all symbols.
 
+<a id="2-does-intro2pwn1-have-rwx-segments-y-or-n"></a>
 ### 2. Does Intro2pwn1 have RWX segments (Y or N)?
 
+<a id="process"></a>
 ### Process
 check with `checksec intro2pwn1`    
 
@@ -39,7 +100,9 @@ On the result there is no RWX showed which mean No.
 > 
 > RWX segments are memory regions with read (R), write (W), and execute (X) permissions, making them vulnerable to exploits like shellcode injection. Modern protections like NX enforce W^X (writable XOR executable), preventing both on the same segment; RWX violates this for easier attacks.
 
+<a id="3-does-intro2pwn2-have-a-stack-canary-y-or-n"></a>
 ### 3. Does Intro2pwn2 have a stack canary (Y or N)?
+<a id="process"></a>
 ### Process
 check with `checksec intro2pwn2`    
 
@@ -51,7 +114,9 @@ The result shows `Stack: No canary found` , so answer is No.
 > 
 > A stack canary (or guard) is a random value placed on the stack between local variables and the return address to detect buffer overflows. Before function return, the program verifies the canary; if altered, it terminates ("stack smashing detected") to block control-flow hijacking
 
+<a id="4-does-intro2pwn2-not-have-pie-y-or-n"></a>
 ### 4. Does Intro2pwn2 not have PIE (Y or N)?
+<a id="process"></a>
 ### Process
 check with `checksec intro2pwn2`   
 
@@ -64,7 +129,9 @@ on the output `PIE: No PIE(0x8048000)` so its a Yes.
 > 
 > PIE (Position Independent Executable) randomizes the binary's base address on each run (ASLR for code/data), complicating exploits relying on fixed addresses like ret2libc. Without PIE, attackers predict locations easily.
 
+<a id="5-cause-a-buffer-overflow-on-intro2pwn1-by-inputting-a-long-string-such-as-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa-what-was-detected"></a>
 ### 5. Cause a buffer overflow on intro2pwn1 by inputting a long string such as AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA. What was detected?
+<a id="process"></a>
 ### Process
 
 1. SSH to the TryHackMe machine (e.g., `ssh user@machine-ip`).
@@ -75,15 +142,20 @@ on the output `PIE: No PIE(0x8048000)` so its a Yes.
 
 ![image](/assets/images/screenshots/1025.jpg)
 
+<a id="6-now-cause-a-buffer-overflow-on-intro2pwn2-what-error-do-you-get"></a>
 ### 6. Now cause a buffer overflow on intro2pwn2. What error do you get?
+<a id="process"></a>
 ### Process 
 same as before.
 
 ![image](/assets/images/screenshots/1026.jpg)
 
+<a id="task-3-cyclic"></a>
 ## ***Task 3: Cyclic***    
 
+<a id="1-which-user-owns-both-the-flagtxt-and-intro2pwn3-file"></a>
 ### 1. Which user owns both the flag.txt and intro2pwn3 file?
+<a id="process"></a>
 ### Process
 `ls -l` lists directory contents in long/detailed format on Linux/Unix systems, so lets use this to see file details on this directory.
 
@@ -94,6 +166,7 @@ same as before.
 
 as you can see the flag file and intro2pwn3 are owned by the same user. so the answer is `dizmas` .
 
+<a id="2-use-checksec-on-intro2pwn3-what-bird-themed-protection-is-missing"></a>
 ### 2. Use checksec on intro2pwn3. What bird-themed protection is missing?
 
 > [!NOTE]
@@ -101,6 +174,7 @@ as you can see the flag file and intro2pwn3 are owned by the same user. so the a
 > 
 > "Stack canary" refers to miners using canaries (birds) in coal mines as early warning detectors for toxic gases the bird dies first, alerting workers. Similarly, the stack canary is a random "sentinel" value placed on the stack between local buffers and the return address.
 
+<a id="process"></a>
 ### Process
 By using `checksec` -  
 
@@ -113,6 +187,7 @@ from the result `Canary` (stack canary) protection is missing on intro2pwn3.
 > 
 > A stack canary is a secret random value placed between function buffers and return address. On return, the program verifies it; corruption triggers "*** stack smashing detected ***" termination, blocking control-flow hijacks. intro2pwn3 lacks this, making ROP/ret2libc easier.
 
+<a id="3-what-ascii-letter-sequence-is-0x4a4a4a4a-pwndbg-should-tell-you"></a>
 ### 3. What ascii letter sequence is 0x4a4a4a4a (pwndbg should tell you).
 
 > [!NOTE]
@@ -121,6 +196,7 @@ from the result `Canary` (stack canary) protection is missing on intro2pwn3.
 > 
 > Pwndbg is a GDB plugin that enhances debugging for exploit development and reverse engineering. It automates GDB's tedious aspects with exploit-focused features: enhanced disassembly using Capstone/Unicorn engines, automatic register/stack/backtrace/disassembly context on every stop, color-coded memory views, ROP gadget finder (`rop`), leak detection (`leakfind`), and telescope for recursive pointer dereferencing.
 
+<a id="process"></a>
 ### Process  
 As the instruction says run `gdb intro2pwn3` to fire up `gdb`. To run a program in gdb, type `r`. You will see the program function normally. If you want to add an input from a text file, you use the "<" key, as such: `r < alphabet` this cause a segmentation fault, and you may observe that there is an invalid address at 0x4a4a4a4a. If you scroll up, you can see the values at each register. For eip, it has been overwritten with `0x4a4a4a4a`.  
 
@@ -128,7 +204,9 @@ As the instruction says run `gdb intro2pwn3` to fire up `gdb`. To run a program 
 
 scroll up or down you'll find the answer.
 
+<a id="4-what-is-the-output-of-cyclic-12"></a>
 ## 4. What is the output of "cyclic 12"?
+<a id="process"></a>
 ### Process
 Just run the `cyclic 12` you'll have the output
 
@@ -137,7 +215,9 @@ Just run the `cyclic 12` you'll have the output
 > [!NOTE]
 > `pwndbg> cyclic 12` generates a 12-byte unique cyclic pattern like "aaaabaaacaaa" for buffer overflow offset calculation
 
+<a id="5-what-pattern-in-hex-was-the-eip-overflowed-with"></a>
 ### 5. What pattern, in hex, was the eip overflowed with?
+<a id="process"></a>
 ### Process
 Generate 200-byte cyclic pattern using `cyclic 200 > pattern.txt` on the terminal. verify the created pattern with `ls` or `ls -ls`.  
 ![image](/assets/images/screenshots/1034.jpg) 
@@ -148,7 +228,9 @@ loaded binary with `gdb -q ./intro2pwn3`  now we have to run with pattern input
 
 pattern `0x6161616a`.  
 
+<a id="6-what-is-the-flag"></a>
 ### 6. What is the flag?
+<a id="process"></a>
 ### Process
 From the task instruction we got a exploit.  Which is:  
 ```python
@@ -175,21 +257,27 @@ and we get the flag.
 > 
 > The payload consists of precise padding (`cyclic(cyclic_find('jaaa'))`) that fills the stack buffer exactly up to but not past the EIP register (32-bit architecture). The `p32(0x08048536)` then overwrites EIP with the target address in little-endian format (`\x36\x85\x04\x08`). When `intro2pwn3` executes the vulnerable input function (likely using `gets()`), the stack overflow redirects program control flow.
 
+<a id="task-4-networking"></a>
 ## ***Task 4: Networking***    
 
+<a id="1-what-port-is-serving-our-challenge"></a>
 ### 1. What port is serving our challenge?
+<a id="process"></a>
 ### Process
 Just read the `.txt` file  
 
 ![image](/assets/images/screenshots/1040.jpg)  
 
+<a id="2-please-use-checksec-on-serve_test-is-there-a-stack-canary-y-or-n"></a>
 ### 2. Please use checksec on serve_test. Is there a stack canary? (Y or N)
+<a id="process"></a>
 ### Process
 Using `checksec` on `serve_test`    
 
 ![image](/assets/images/screenshots/1041.jpg)  
 
 on the output it says `Stack: Canary found`. Which means Yes.
+<a id="3-what-is-the-flag"></a>
 ### 3. What is the flag?
 Exploit :  
 ```c
@@ -296,6 +384,7 @@ int main()
 
 > [!NOTE]
 > This C code creates a TCP server on port 1336 with a deliberate buffer overflow vulnerability. The `target_function()` reads 100 bytes into a 32-byte buffer next to `printflag`, allowing overflow to control it. Send exactly 36 bytes: 32 bytes padding + `0xdeadbeef` (little-endian `\xef\xbe\xad\xde`) to make `printflag == 0xdeadbeef` and receive the flag.
+<a id="process"></a>
 ### Process
 We will need to write a script to connect to the port, receive the data, and send our payload. To connect to a port in Pwntools, use the `remote()` function in the format of: `remote (IP, port)`.  
 Exploit:
@@ -326,10 +415,13 @@ then open another tab login and run the exploit that we made and named `script.p
 we got the flag.
 
 
+<a id="task-5-shellcraft"></a>
 ## ***Task 5: Shellcraft     
 
 
+<a id="1-what-does-aslr-stand-for"></a>
 ### 1. What does ASLR stand for?  
+<a id="process"></a>
 ### Process  
 Address Space Layout Randomization  
 
@@ -340,38 +432,53 @@ Address Space Layout Randomization
 > 
 > Prevents buffer overflow exploits that rely on predictable memory addresses. Without ASLR, attackers know exactly where `print_flag()` lives (like `0x08048536`). With ASLR, that address changes every execution, breaking your `p32(0x08048536)` payload.
 
+<a id="impact-on-your-exploit"></a>
 ## Impact on Your Exploit  
+<a id="2-who-owns-intro2pwnfinal"></a>
 ### 2. Who owns intro2pwnFinal?  
+<a id="process"></a>
 ### Process  
 Use basic command `ls -la` to see file details on the current directory.    
 
 ![image](/assets/images/screenshots/1043.jpg)  
 
 output shows `root` owns intro2pwnFinal.  
+<a id="3-use-checksec-on-intro2pwn-final-is-nx-enabled-y-or-n"></a>
 ### 3. Use checksec on intro2pwn final. Is NX enabled? (Y or N)  
+<a id="process"></a>
 ### Process  
 Use `checksec` on the file    
 
 ![image](/assets/images/screenshots/1044.jpg)  
 
 output shows `NS: NX unknown - GNU_STACK missing` so the answer is No.  
+<a id="4-please-use-the-cyclic-tool-and-gdb-to-find-the-eip-what-letter-sequence-fills-the-eip"></a>
 ### 4. Please use the cyclic tool and gdb to find the eip. What letter sequence fills the eip?
+<a id="process"></a>
 ### Process  
 TL;DR  
 ![image](/assets/images/screenshots/1045.jpg)  
 
+<a id="5-run-your-exploit-with-the-breakpoint-outside-of-gdb-intro2pwnfinal-output_file-what-does-it-say-when-you-hit-the-breakpoint"></a>
 ### 5. Run your exploit with the breakpoint outside of gdb (./intro2pwnFinal < output_file). What does it say when you hit the breakpoint?
+<a id="process"></a>
 ### Process  
 run exploit  you'll get `Trace/breakpoint trap`  
+<a id="6-run-the-command-shellcraft-i386linuxsh-f-a-which-will-print-our-shellcode-in-assembly-format-the-first-line-will-tell-you-that-it-is-running-a-function-from-the-unix-standard-library-with-the-parameters-of-pathbinsh-argvsh-envp0-what-function-is-it-using"></a>
 ### 6. Run the command "shellcraft i386.linux.sh -f a", which will print our shellcode in assembly format. The first line will tell you that it is running a function from the Unix standard library, with the parameters of "(path='/bin///sh', argv=['sh'], envp=0)." What function is it using?
+<a id="process"></a>
 ### Process  
 TL;DR  
 `execve`  
+<a id="7-run-whoami-once-you-have-the-shell-who-are-you"></a>
 ### 7. Run whoami once you have the shell. Who are you?  
+<a id="process"></a>
 ### Process  
 TL;DR   
 `root`   
+<a id="8-what-is-the-flag"></a>
 ### 8. What is the flag?  
+<a id="process"></a>
 ### Process  
 TL;DR  
 `flag{pwn!ng_!$_fr33d0m}`  

@@ -4,6 +4,27 @@ date: 2026-02-28 19:17:00 +0600
 categories: [writeup]
 ---
 
+## Index <!-- omit in toc -->
+- [Room Prerequisites] (#room-prerequisites)
+- [Learning Objectives] (#learning-objectives)
+- [**Task 2: OSI Model**] (#task-2-osi-model)
+- [Layer 1: Physical Layer] (#layer-1-physical-layer)
+- [Layer 2: Data Link Layer] (#layer-2-data-link-layer)
+- [Layer 3: Network Layer] (#layer-3-network-layer)
+- [Layer 4: Transport Layer] (#layer-4-transport-layer)
+- [Layer 5: Session Layer] (#layer-5-session-layer)
+- [Layer 6: Presentation Layer] (#layer-6-presentation-layer)
+- [Layer 7: Application Layer] (#layer-7-application-layer)
+- [Summary] (#summary)
+- [Looking Up Your Network Configuration] (#looking-up-your-network-configuration)
+- [Private Addresses] (#private-addresses)
+- [Routing] (#routing)
+- [UDP] (#udp)
+- [TCP] (#tcp)
+- [UDP] (#udp)
+- [TCP] (#tcp)
+- [The Life of a Packet] (#the-life-of-a-packet)
+- [**Process:**] (#process)
 
 Learn about the ISO OSI model and the TCP/IP protocol suite.  
 **Task 1: Introduction**  
@@ -17,10 +38,12 @@ This room is the first room in a series of four rooms dedicated to introducing t
 - [Networking Core Protocols](https://tryhackme.com/r/room/networkingcoreprotocols)  
 - [Networking Secure Protocols](https://tryhackme.com/r/room/networkingsecureprotocols)  
 
+<a id="room-prerequisites"></a>
 ### Room Prerequisites  
 
 This room expects that you know terms such as IP address and TCP port number; however, we don’t expect that the reader is able to explain such terms in proper technical depth. If you are unfamiliar with these terms, please consider joining the [Pre Security](https://tryhackme.com/r/path/outline/presecurity) path.  
 
+<a id="learning-objectives"></a>
 ### Learning Objectives  
 
 By the time you finish this room, you will have learned about the following:  
@@ -29,6 +52,7 @@ By the time you finish this room, you will have learned about the following:
 - TCP, UDP, and port numbers  
 - How to connect to an open TCP port from the command line  
 
+<a id="task-2-osi-model"></a>
 ### **Task 2: OSI Model**  
 
 Before we start, we should note that the OSI model might initially seem complicated. Don’t worry if you encounter cryptic acronyms, as we provide examples of the OSI model layers. We assure you that by the time you finish this module, this task will feel like a piece of cake.  
@@ -47,6 +71,7 @@ The numbering starts with the physical layer being layer 1, while the top layer,
 
 ![The seven layers of the OSI ISO Model.](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/5f04259cf9bf5b57aed2c476-1719848845717.svg)  
 
+<a id="layer-1-physical-layer"></a>
 ### Layer 1: Physical Layer  
 
 The physical layer, also referred to as layer 1, deals with the physical connection between devices; this includes the medium, such as a wire, and the definition of the binary digits 0 and 1. Data transmission can be via an electrical, optical, or wireless signal. Consequently, we need data cables or antennas, depending on our physical medium.
@@ -55,6 +80,7 @@ In addition to Ethernet cable, shown in the illustration below, and optical fibr
 
 ![Ethernet cable](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/5f04259cf9bf5b57aed2c476-1719848954704.svg)  
 
+<a id="layer-2-data-link-layer"></a>
 ### Layer 2: Data Link Layer
 
 The physical layer defines a medium to transmit our signal. The data link layer, i.e., layer 2, represents the protocol that enables data transfer between nodes on the same network segment. Let’s put it in simpler terms. The data link layer describes an agreement between the different systems on the same network segment on how to communicate. A network segment refers to a group of networked devices using a shared medium or channel for information transfer. For example, consider a company office with ten computers connected to a network switch; that’s a network segment.
@@ -71,6 +97,7 @@ We expect to see two MAC addresses in each frame in real network communication o
 
 ![Wireshark interface displaying a packet with the source and destination MAC addresses highlighted.](https://tryhackme-images.s3.amazonaws.com/user-uploads/5f04259cf9bf5b57aed2c476/room-content/5f04259cf9bf5b57aed2c476-1719848893497.png)  
 
+<a id="layer-3-network-layer"></a>
 ### Layer 3: Network Layer
 
 The data link layer focuses on sending data between two nodes on the same network segment. The network layer, i.e., layer 3, is concerned with sending data between different networks. In more technical terms, the network layer handles logical addressing and routing, i.e., finding a path to transfer the network packets between the diverse networks.
@@ -83,30 +110,35 @@ The network below shows that computers A and B are connected, although on differ
 
 Examples of the network layer include Internet Protocol (IP), Internet Control Message Protocol (ICMP), and Virtual Private Network (VPN) protocols such as IPSec and SSL/TLS VPN.
 
+<a id="layer-4-transport-layer"></a>
 ### Layer 4: Transport Layer
 
 Layer 4, the transport layer, enables end-to-end communication between running applications on different hosts. Your web browser is connected to the TryHackMe web server over the transport layer, which can support various functions like flow control, segmentation, and error correction.
 
 Examples of layer 4 are Transmission Control Protocol (TCP) and User Datagram Protocol (UDP).
 
+<a id="layer-5-session-layer"></a>
 ### Layer 5: Session Layer
 
 The session layer is responsible for establishing, maintaining, and synchronising communication between applications running on different hosts. Establishing a session means initiating communication between applications and negotiating the necessary parameters for the session. Data synchronisation ensures that data is transmitted in the correct order and provides mechanisms for recovery in case of transmission failures.
 
 Examples of the session layer are Network File System (NFS) and Remote Procedure Call (RPC).
 
+<a id="layer-6-presentation-layer"></a>
 ### Layer 6: Presentation Layer
 
 The presentation layer ensures the data is delivered in a form the application layer can understand. Layer 6 handles data encoding, compression, and encryption. An example of encoding is character encoding, such as ASCII or Unicode.
 
 Various standards are used at the presentation layer. Consider the scenario where we want to send an image via email. First, we use JPEG, GIF, and PNG to save our images; furthermore, although hidden from the user by the email client, we use MIME (Multipurpose Internet Mail Extensions) to attach the file to our email. MIME encodes a binary file using 7-bit ASCII characters.
 
+<a id="layer-7-application-layer"></a>
 ### Layer 7: Application Layer
 
 The application layer provides network services directly to end-user applications. Your web browser would use the HTTP protocol to request a file, submit a form, or upload a file.
 
 The application layer is the top layer, and you might have encountered many of its protocols as you use different applications. Examples of Layer 7 protocols are HTTP, FTP, DNS, POP3, SMTP, and IMAP. Don’t worry if you are not familiar with all of them.
 
+<a id="summary"></a>
 ### Summary
 
 Reading about the ISO OSI model for the first time can be intimidating; however, it becomes easier as you progress in your study of networking protocols. To help with your studies, we have summarised the ISO OSI layers in the table below.
@@ -184,6 +216,7 @@ So, what makes an IP address? An IP address comprises four octets, i.e., 32 bits
 
 At the risk of oversimplifying things, the 0 and 255 are reserved for the network and broadcast addresses, respectively. In other words, `192.168.1.0` is the network address, while `192.168.1.255` is the broadcast address. Sending to the broadcast address targets all the hosts on the network. With simple math, you can conclude that we cannot have more than 4 billion unique IPv4 addresses. If you are curious about the math, it is approximately 232 because we have 32 bits. This number is approximate because we didn’t consider network and broadcast addresses.
 
+<a id="looking-up-your-network-configuration"></a>
 ### Looking Up Your Network Configuration
 
 You can look up your IP address on the MS Windows command line using the command `ipconfig`. On Linux and UNIX-based systems, you can issue the command `ifconfig` or `ip address show`, which can be typed as `ip a s`. In the terminal window below, we show `ifconfig`.
@@ -232,6 +265,7 @@ The terminal output above indicates the following:
 
 If you are wondering, a subnet mask of `255.255.255.0` can also be written as `/24`. The `/24` means that the leftmost 24 bits within the IP address do not change across the network, i.e., the subnet. In other words, the leftmost three octets are the same across the whole subnet; therefore, we can expect to find addresses that range from `192.168.66.1` to `192.168.66.254`. Similar to what was mentioned earlier, `192.168.66.0` and `192.168.66.255` are the network and broadcast addresses, respectively.
 
+<a id="private-addresses"></a>
 ### Private Addresses
 
 As we are explaining IP addresses, it is useful to mention that for most practical purposes, there are two types of IP addresses:
@@ -249,6 +283,7 @@ We presented earlier an analogy stating that a public IP address is like your ho
 
 Before moving on, I recommend memorising the private IP address ranges. Otherwise, you might see an IP address such as `10.1.33.7` or `172.31.33.7` and try to access it from a public IP address.
 
+<a id="routing"></a>
 ### Routing
 
 A router is like your local post office; you hand them the mail parcel, and they would know how to deliver it. If we dig deeper, you might mail something to an address in another city or country. The post office will check the address and decide where to send it next. For example, if it is to leave the country, we expect one central office to handle all shipments abroad.
@@ -275,6 +310,7 @@ ANSWER: 49.69.147.197
 
 The IP protocol allows us to reach a destination host on the network; the host is identified by its IP address. We need protocols that would enable processes on networked hosts to communicate with each other. There are two transport protocols to achieve that: UDP and TCP.
 
+<a id="udp"></a>
 ### UDP
 
 UDP (User Datagram Protocol) allows us to reach a specific process on this target host. UDP is a simple connectionless protocol that operates at the transport layer, i.e., layer 4. Being connectionless means that it does not need to establish a connection. UDP does not even provide a mechanism to know that the packet has been delivered.
@@ -285,6 +321,7 @@ A real-life example similar to UDP is the standard mail service, with no deliv
 
 But what if we want a transport protocol that acknowledges received packets? The answer lies in using TCP instead of UDP.
 
+<a id="tcp"></a>
 ### TCP
 
 TCP (Transmission Control Protocol) is a connection-oriented transport protocol. It uses various mechanisms to ensure reliable data delivery sent by the different processes on the networked hosts. Like UDP, it is a layer 4 protocol. Being connection-oriented, it requires the establishment of a TCP connection before any data can be sent.
@@ -303,6 +340,7 @@ Similar to UDP, TCP identifies the process of initiating or waiting (listenin
 
 The IP protocol allows us to reach a destination host on the network; the host is identified by its IP address. We need protocols that would enable processes on networked hosts to communicate with each other. There are two transport protocols to achieve that: UDP and TCP.
 
+<a id="udp"></a>
 ### UDP
 
 UDP (User Datagram Protocol) allows us to reach a specific process on this target host. UDP is a simple connectionless protocol that operates at the transport layer, i.e., layer 4. Being connectionless means that it does not need to establish a connection. UDP does not even provide a mechanism to know that the packet has been delivered.
@@ -313,6 +351,7 @@ A real-life example similar to UDP is the standard mail service, with no deliv
 
 But what if we want a transport protocol that acknowledges received packets? The answer lies in using TCP instead of UDP.
 
+<a id="tcp"></a>
 ### TCP
 
 TCP (Transmission Control Protocol) is a connection-oriented transport protocol. It uses various mechanisms to ensure reliable data delivery sent by the different processes on the networked hosts. Like UDP, it is a layer 4 protocol. Being connection-oriented, it requires the establishment of a TCP connection before any data can be sent.
@@ -351,6 +390,7 @@ We start with application data. At the transport layer, we add a TCP or UDP 
 
 The process has to be reversed on the receiving end until the application data is extracted.
 
+<a id="the-life-of-a-packet"></a>
 ### The Life of a Packet
 
 Based on what we have studied so far, we can explain a _simplified version_ of the packet’s life. Let’s consider the scenario where you search for a room on TryHackMe.
@@ -447,6 +487,7 @@ Connection closed by foreign host.
 ```
 
 Use `telnet` to connect to the web server on `10.48.128.71`. What is the name and version of the HTTP server?  
+<a id="process"></a>
 ### **Process:**   
 ![image](/assets/images/screenshots/1048.jpg)  
 so name and version of the HTTP server is : `lighttpd/1.4.63`  

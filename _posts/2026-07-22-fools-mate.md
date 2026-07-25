@@ -4,6 +4,17 @@ date: 2026-07-22 00:23:13 +0600
 categories: [writeup]
 ---
 
+## Index <!-- omit in toc -->
+- [Executive Summary] (#executive-summary)
+- [1. Enumeration] (#1-enumeration)
+- [Port Scanning] (#port-scanning)
+- [Web Application Reconnaissance] (#web-application-reconnaissance)
+- [2. Vulnerability Analysis] (#2-vulnerability-analysis)
+- [Root Cause Analysis] (#root-cause-analysis)
+- [3. Exploitation] (#3-exploitation)
+- [Server Response] (#server-response)
+
+<a id="executive-summary"></a>
 ## Executive Summary
 - **Room:** Fool's Mate
 - **Platform:** TryHackMe
@@ -12,8 +23,10 @@ categories: [writeup]
 
 The **Fool's Mate** challenge demonstrates the dangers of relying solely on client-side validation for business logic and access controls. The target application is a chess-themed Node.js web application that uses JavaScript in the browser to prevent users from making winning moves. By bypassing the browser validation entirely and sending a direct API request to the backend, we can trigger the checkmate condition and retrieve the flag.
 
+<a id="1-enumeration"></a>
 ## 1. Enumeration
 
+<a id="port-scanning"></a>
 ### Port Scanning
 
 We begin by scanning the target host using `nmap` to identify open ports and running services:
@@ -30,6 +43,7 @@ nmap -Pn -sC -sV -p- <TARGET_IP>
 
 ![nmap](/assets/images/screenshots/nmap_scan.png)
 
+<a id="web-application-reconnaissance"></a>
 ### Web Application Reconnaissance
 
 Running `whatweb` against the web service confirms the backend stack:
@@ -46,6 +60,7 @@ whatweb http://<TARGET_IP>
 
 ![whatweb](/assets/images/screenshots/whatweb.png)
 
+<a id="2-vulnerability-analysis"></a>
 ## 2. Vulnerability Analysis
 
 Upon interacting with the web interface and playing chess moves, attempting a winning move triggers a client-side warning dialog ("_I'll shut down your PC if you play that._") and blocks the action.
@@ -64,12 +79,14 @@ if (probe.isCheckmate()) {
 
 ![viewsource](/assets/images/screenshots/viewsource.png)
 
+<a id="root-cause-analysis"></a>
 ### Root Cause Analysis
 
 - **Client-Side Enforcer:** The application relies on client-side JavaScript running in the user's browser to evaluate whether a move leads to a checkmate and blocks the UI from sending the request if it does.
 
 - **Lack of Server-Side Validation/Enforcement:** The backend application relies on the browser to perform validation instead of enforcing security and game rules on the server side.
 
+<a id="3-exploitation"></a>
 ## 3. Exploitation
 
 Since client-side controls can be easily bypassed by crafting raw HTTP requests, we bypass the browser environment completely using `curl`.
@@ -82,6 +99,7 @@ curl -X POST http://<TARGET_IP>/api/move \
   -d '{"from":"a1","to":"a8"}'
 ```
 
+<a id="server-response"></a>
 ### Server Response
 
 The backend server processes the move without evaluating the client-side restriction and returns the checkmate status along with the flag:

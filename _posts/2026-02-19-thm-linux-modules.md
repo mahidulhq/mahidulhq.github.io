@@ -3,6 +3,18 @@ title: "THM - Linux Modules"
 date: 2026-02-19 10:51:00 +0600
 categories: [writeup]
 ---
+
+## Index <!-- omit in toc -->
+- [***Task 1: Let's Introduce***] (#task-1-lets-introduce)
+- [***Task 2: du***] (#task-2-du)
+- [***Task 3: Grep, Egrep, Fgrep***] (#task-3-grep-egrep-fgrep)
+- [***Task 4: Did someone said STROPS?***] (#task-4-did-someone-said-strops)
+- [***Task 5: tr***] (#task-5-tr)
+- [***Task 6: awk***] (#task-6-awk)
+- [***Task 7: sed***] (#task-7-sed)
+- [****Task 8: xargs****] (#task-8-xargs)
+
+<a id="task-1-lets-introduce"></a>
 ##### ***Task 1: Let's Introduce***  
 
 This room is entirely based on, you can say revision, or may help you familiarize more with terminal. 
@@ -32,6 +44,7 @@ Just make sure that you're using a linux VM, so that you can get a hands on if
 
 Happy Learning ;)
 
+<a id="task-2-du"></a>
 ###### ***Task 2: du***  
 About the Command
 
@@ -76,6 +89,7 @@ It won't specify you the user ownership though, so you can use `stat` command 
 
 Syntax: `stat`
 
+<a id="task-3-grep-egrep-fgrep"></a>
 ###### ***Task 3: Grep, Egrep, Fgrep***
 
 Download Task Files
@@ -136,6 +150,7 @@ ANS: `LinuxIsGawd`
 ANS: fs0ciety  
 
 
+<a id="task-4-did-someone-said-strops"></a>
 ###### ***Task 4: Did someone said STROPS?***  
 
 I believe from here on, things are going to be a little different other than grepping the patterns. To keep things as simple as possible, we are going to start with a short note on what and where.
@@ -160,6 +175,7 @@ Other commands to be familiar with:
 
 I am gonna walk you through the commands I mentioned above in the following tasks.
 
+<a id="task-5-tr"></a>
 ###### ***Task 5: tr***  
 
 Translate command(`tr`) can help you in number of ways, ranging from changing character cases in a string to replacing characters in a string. It's awesome at it's usage. Plus, it's the easiest command and a must know module for quick operations on strings.
@@ -212,6 +228,7 @@ ANS: `:alpha:`
 3. What sequence is equivalent to selecting hexadecimal characters?  
 ANS: `:xdigit:`  
 
+<a id="task-6-awk"></a>
 ###### ***Task 6: awk***  
 
 Download Task Files
@@ -337,6 +354,7 @@ ANS: `awk 'BEGIN{OFS=":"} {print $1, $4}' awk.txt`
 2. How will you make the output as following (there can be multiple; answer it using the above specified variables in BEGIN pattern):  
 _ippsec, john, thecybermentor, liveoverflow, nahamsec, stok,_   
 ANS: `awk 'BEGIN{ORS=", "} {print $1}' awk.txt`   
+<a id="task-7-sed"></a>
 ###### ***Task 7: sed***  
 
 Download Task Files
@@ -493,6 +511,7 @@ cat sed2.txt | tr -d '[:digit:]'
 6. What did she sed?(In double quotes)   
 ANS: `"That's What"`  
 
+<a id="task-8-xargs"></a>
 ###### ****Task 8: xargs****  
 
 Download Task Files
