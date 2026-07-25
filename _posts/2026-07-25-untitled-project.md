@@ -4,8 +4,6 @@ title: Project Showcase 01 - keeylogger
 category: projects
 ---
 
-# Documentation of `keeylogger`
-
 ## Index
 - [Overview](#overview)
 - [What This Script Does](#what-this-script-does)

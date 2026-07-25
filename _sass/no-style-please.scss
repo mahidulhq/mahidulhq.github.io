@@ -47,6 +47,14 @@ p { margin: 1rem 0; }
 
 li { margin: 0.4rem 0; }
 
+.home-page .post-title {
+  text-decoration: none;
+}
+
+.home-page .post-title:hover {
+  text-decoration: none;
+}
+
 *:target { background: yellow; }
 
 .w {
