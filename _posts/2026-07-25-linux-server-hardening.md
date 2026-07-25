@@ -6,8 +6,6 @@ category: projects
 
 A practical, beginner-friendly project to harden an Ubuntu server using security best practices.
 
----
-
 ## Table of Contents
 
 - [Project Overview](00-project-overview.md)
@@ -34,7 +32,6 @@ A practical, beginner-friendly project to harden an Ubuntu server using security
 2. [Config Files](https://github.com/mahidulhq/linux-server-hardening-runbook/tree/main/config)  
 3. [Validation Screenshots](https://github.com/mahidulhq/linux-server-hardening-runbook/tree/main/img)
 4. [Tutorial Video in BN](https://youtu.be/fAOpoHHjaGo)
----
 
 ## Scope
 
@@ -48,7 +45,6 @@ This project focuses on:
 - Backup and recovery readiness
 - Validation checklist and ongoing maintenance
 
----
 
 ## Quick Start
 
@@ -58,7 +54,6 @@ This project focuses on:
 4. Complete [Validation & Security Checklist]( validation-and-security-checklist.md)
 5. Check out the Project Demonstration on [Youtube](https://youtu.be/fAOpoHHjaGo)
 
----
 
 ## Safety Notes
 
