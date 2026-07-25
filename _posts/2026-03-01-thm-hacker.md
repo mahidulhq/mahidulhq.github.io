@@ -4,15 +4,6 @@ date: 2026-03-01 01:23:00 +0600
 categories: [writeup]
 ---
 
-## Index <!-- omit in toc -->
-- [**Task 1: Methodology Outline**] (#task-1-methodology-outline)
-- [**Task 2: Reconnaissance Overview**] (#task-2-reconnaissance-overview)
-- [**Task 3: Enumeration and Scanning Overview**] (#task-3-enumeration-and-scanning-overview)
-- [**Task 4: Exploitation**] (#task-4-exploitation)
-- [**Task 6: Covering Tracks**] (#task-6-covering-tracks)
-- [**Task 7: Reporting**] (#task-7-reporting)
-
-<a id="task-1-methodology-outline"></a>
 ### **Task 1: Methodology Outline**
 
 **What process does a Hacker follow?**
@@ -32,7 +23,6 @@ While you might think that a hacker does whatever he/she wants, it is actually t
 What is the first phase of the Hacker Methodology?  
 Answer: `Reconnaissance`  
 
-<a id="task-2-reconnaissance-overview"></a>
 ### **Task 2: Reconnaissance Overview**
 
 The first phase of the Ethical Hacker Methodology is **Reconnaissance.**
@@ -91,7 +81,6 @@ What is it called when you use Google to look for specific vulnerabilities or to
 Answer: `Google Dorking`  
 
 
-<a id="task-3-enumeration-and-scanning-overview"></a>
 ### **Task 3: Enumeration and Scanning Overview**
 
 **The second phase of the Hacker Methodology is Scanning and Enumeration.**
@@ -136,7 +125,6 @@ Answer: `Rapid7`
 What company developed the technology behind the tool Burp Suite?  
 Answer: `portswigger`  
 
-<a id="task-4-exploitation"></a>
 ### **Task 4: Exploitation**
 
 Now that we have talked about the other three phases of a pentest, it is time to talk about the one that is often portrayed as "the coolest".
@@ -185,7 +173,6 @@ Answer: `System`
 What thing related to SSH could allow you to login to another machine (even without knowing the username or password)?  
 Answer: `Keys`  
 
-<a id="task-6-covering-tracks"></a>
 ### **Task 6: Covering Tracks**
 
 Most professional/ethical penetration testers never have the need to "cover their tracks". However, this is still a phase in the methodology.
@@ -200,7 +187,6 @@ However, even though you do not cover your tracks, this does not resolve you of 
 
 **While ethical hackers rarely have a need to cover their tracks, you still must carefully track and notate all of the tasks that you performed as part of the penetration test to assist in fixing the vulnerabilities and recommending changes to the system owner.**
 
-<a id="task-7-reporting"></a>
 ### **Task 7: Reporting**
 
 The final phase of the pentest methodology is the reporting phase.

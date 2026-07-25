@@ -4,10 +4,7 @@ date: 2026-03-02 00:27:00 +0600
 categories: [writeup]
 ---
 
-## Index <!-- omit in toc -->
-- [**Task 1: Neighbour**] (#task-1-neighbour)
 
-<a id="task-1-neighbour"></a>
 ### **Task 1: Neighbour**
 
 Start Machine

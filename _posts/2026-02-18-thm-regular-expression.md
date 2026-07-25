@@ -4,29 +4,19 @@ date: 2026-02-18 02:49:00 +0600
 categories: [writeup]
 ---
 
-## Index <!-- omit in toc -->
-- [What are regular expressions?] (#what-are-regular-expressions)
-- [Why should I learn how to use them?] (#why-should-i-learn-how-to-use-them)
-- [I know all that, but I'm lazy.] (#i-know-all-that-but-im-lazy)
-- [Where's the 'Deploy' button?] (#wheres-the-deploy-button)
-
 ***TASK 1:***  Introduction    
-<a id="what-are-regular-expressions"></a>
 ## What are regular expressions?
 
 Regular expressions (or Regex) are patterns of text that you define to search documents and match exactly what you're looking for.
 
-<a id="why-should-i-learn-how-to-use-them"></a>
 ## Why should I learn how to use them?
 
 Even if you won't need them sooner or later, it's a great tool to know how to use. It will make you more capable in CTF's, and potentially a better developer if that's a goal you have. You spend a little time learning it and save yourself lots of time in the long run by using it.
 
-<a id="i-know-all-that-but-im-lazy"></a>
 ## I know all that, but I'm lazy.
 
 This is a lazy person's tutorial. There's a little reading, and then you **learn by doing**.
 
-<a id="wheres-the-deploy-button"></a>
 ## Where's the 'Deploy' button?
 
 **There's no machine to deploy.** There are two ways to test your expressions. Either:
