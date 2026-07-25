@@ -30,6 +30,14 @@ entries:
       show_more_text: more posts...
       show_more_url: writeup-archive.html
 
+  - title: PROJECTS
+    post_list:
+      limit: 5
+      category: projects
+      show_more: true
+      show_more_text: more posts...
+      show_more_url: projects-archive.html
+
   - title: LITERARY DIARY
     post_list:
       limit: 3
