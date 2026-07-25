@@ -114,7 +114,7 @@ ul.social-links {
   top: 1rem;
   right: 1rem;
   background: none;
-  border: 1px solid currentColor;
+  border: none;  /* changed: 1px solid currentColor; */
   border-radius: 4px;
   cursor: pointer;
   font-size: 1.2rem;
