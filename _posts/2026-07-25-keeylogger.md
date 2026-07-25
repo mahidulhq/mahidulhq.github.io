@@ -282,8 +282,6 @@ For issues or questions, refer to:
 - pynput documentation: <https://pynput.readthedocs.io/>
 - Python documentation: <https://docs.python.org/>
 
----
-
 **Version**: 1.0  
 **Last Updated**: March 4, 2026  
 **Compatibility**: Python 3.6+, Windows, Linux, macOS (with pynput)
