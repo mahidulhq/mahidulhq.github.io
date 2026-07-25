@@ -4,7 +4,7 @@
     {%- if item.url -%}
       <a href="{{ item.url }}">{{ item.title }}</a>
     {%- else -%}
-      {{ item.title }}
+      <strong>{{ item.title }}</strong> <!-- comment: changed from {{ item.title }} -->
     {%- endif -%}
     </li>
 
