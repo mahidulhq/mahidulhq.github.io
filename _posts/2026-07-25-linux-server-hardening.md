@@ -33,7 +33,7 @@ A practical, beginner-friendly project to harden an Ubuntu server using security
 1. [Github Repository](https://github.com/mahidulhq/linux-server-hardening-runbook)  
 2. [Config Files](https://github.com/mahidulhq/linux-server-hardening-runbook/tree/main/config)  
 3. [Validation Screenshots](https://github.com/mahidulhq/linux-server-hardening-runbook/tree/main/img)
-4. [Tutorial Video in [BN]](https://youtu.be/fAOpoHHjaGo)
+4. [Tutorial Video in BN](https://youtu.be/fAOpoHHjaGo)
 ---
 
 ## Scope
