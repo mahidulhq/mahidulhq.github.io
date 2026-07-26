@@ -56,7 +56,7 @@ entries:
   #         - title: with subsubitems
   #         - title: example page
   #           url: about
-  - title: SOCIAL
+  - title: /SOCIAL
     entries_class: social-links
     entries:
       - title: github
@@ -70,7 +70,7 @@ entries:
       - title: youtube
         url: https://www.youtube.com/@mahidulhq
   
-  - title: ABOUT
+  - title: /ABOUT
     entries:
       - title: mahidulhq
         url: about
