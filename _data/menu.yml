@@ -2,7 +2,7 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: INTRO
+  - title: /INTRO
     entries:
       - title: cybersecurity enthusiast, ux/ui designer, tech explorer
 
@@ -14,7 +14,7 @@ entries:
   #     show_more_text: more...
   #     show_more_url: archive.html
     
-  - title: WRITING
+  - title: /WRITING
     post_list:
       limit: 5
       category: writing
@@ -22,7 +22,7 @@ entries:
       show_more_text: more posts...
       show_more_url: writing-archive.html
 
-  - title: WRITE-UPS
+  - title: /WRITE-UPS
     post_list:
       limit: 5
       category: writeup
@@ -30,7 +30,7 @@ entries:
       show_more_text: more posts...
       show_more_url: writeup-archive.html
 
-  - title: PROJECTS
+  - title: /PROJECTS
     post_list:
       limit: 5
       category: projects
@@ -38,7 +38,7 @@ entries:
       show_more_text: more posts...
       show_more_url: projects-archive.html
 
-  - title: LITERARY DIARY
+  - title: /LITERARY DIARY
     post_list:
       limit: 3
       category: diary

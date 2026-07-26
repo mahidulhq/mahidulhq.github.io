@@ -1,5 +1,5 @@
 ---
 layout: archive
 which_category: projects
-title: All posts of category 'projects'
+title: All /projects of @mahidulhq
 ---
