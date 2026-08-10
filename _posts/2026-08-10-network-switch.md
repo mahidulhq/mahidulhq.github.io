@@ -65,7 +65,7 @@ At the center of the green PCB side sits the **Realtek RTL8309N**. In unmanaged 
 - **Designators:** `U2`, `U3`, `U5`, `U7`
 - **Role:** Pulse Transformers / Magnetics Filters
 
-![alt text](../assets/images/screenshots/network_switch/topmag.jpg)
+![alt text](../assets/images/screenshots/network_switch/topmag.jpeg)
 
 Positioned directly behind the 8 RJ45 ports on the top side of the board are four dual-channel **TopMag TD2001-R** modules. Ethernet magnetics serve three vital physical functions:
 
