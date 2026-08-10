@@ -1,4 +1,9 @@
-# Inside a 10/100M Network Switch: Teardown & Hardware Analysis of the Netis ST3108C
+---
+title: "Inside a 10/100M Network Switch: Teardown & Hardware Analysis of the Netis ST3108C"
+date: 2026-08-10 00:17:08 +0600
+categories: [writing]
+---
+
 I've been digging through my hardware component bag and found a used Netis Ethernet switch. I was curious about what's inside and how it works, so I tore it open and did some research to see what component is doing what. After hours of searching, I found gold.
 
 Unmanaged Fast Ethernet switches are often treated as simple black boxes in networking- plug in power, attach Ethernet cables, and traffic routes seamlessly across devices. To understand how this budget-friendly device operates at the silicon level, I took a screwdriver to my Netis ST3108C 8-Port 10/100M Fast Ethernet Switch to map out its hardware architecture, trace how its internal components handle data, and extract key insights for hardware enthusiasts and security researchers.
@@ -6,17 +11,16 @@ Unmanaged Fast Ethernet switches are often treated as simple black boxes in netw
 Here is a hardware breakdown of what exists inside the enclosure, how the circuit components route data, and key takeaways for hardware enthusiasts and security researchers.
 ## Table of Contents
 
-- [Inside a 10/100M Network Switch: Teardown \& Hardware Analysis of the Netis ST3108C](#inside-a-10100m-network-switch-teardown--hardware-analysis-of-the-netis-st3108c)
-  - [Table of Contents](#table-of-contents)
-  - [1. Device Overview \& Specifications](#1-device-overview--specifications)
-  - [2. Hardware Architecture \& Key Silicon Components](#2-hardware-architecture--key-silicon-components)
-    - [A. The Brain: Realtek RTL8309N Switch Controller](#a-the-brain-realtek-rtl8309n-switch-controller)
-    - [B. Signal Isolation: TopMag TD2001-R Magnetic Modules](#b-signal-isolation-topmag-td2001-r-magnetic-modules)
-    - [C. Timing Reference: 25.000 MHz Crystal Oscillator](#c-timing-reference-25000-mhz-crystal-oscillator)
-    - [D. Power Management: AF1117M 3.3V Low-Dropout Regulator](#d-power-management-af1117m-33v-low-dropout-regulator)
-  - [3. Step-by-Step Data Path: How a Frame Moves Through the Switch](#3-step-by-step-data-path-how-a-frame-moves-through-the-switch)
-  - [4. Hardware Security \& Research Takeaways](#4-hardware-security--research-takeaways)
-  - [Conclusion](#conclusion)
+- [Table of Contents](#table-of-contents)
+- [1. Device Overview \& Specifications](#1-device-overview--specifications)
+- [2. Hardware Architecture \& Key Silicon Components](#2-hardware-architecture--key-silicon-components)
+  - [A. The Brain: Realtek RTL8309N Switch Controller](#a-the-brain-realtek-rtl8309n-switch-controller)
+  - [B. Signal Isolation: TopMag TD2001-R Magnetic Modules](#b-signal-isolation-topmag-td2001-r-magnetic-modules)
+  - [C. Timing Reference: 25.000 MHz Crystal Oscillator](#c-timing-reference-25000-mhz-crystal-oscillator)
+  - [D. Power Management: AF1117M 3.3V Low-Dropout Regulator](#d-power-management-af1117m-33v-low-dropout-regulator)
+- [3. Step-by-Step Data Path: How a Frame Moves Through the Switch](#3-step-by-step-data-path-how-a-frame-moves-through-the-switch)
+- [4. Hardware Security \& Research Takeaways](#4-hardware-security--research-takeaways)
+- [Conclusion](#conclusion)
 
 
 ## 1. Device Overview & Specifications
