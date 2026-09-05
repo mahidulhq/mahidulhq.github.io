@@ -258,16 +258,7 @@ To ensure the evidence remains legally admissible, the analyst generates a SHA-2
 To transform millions of unorganized, raw lines of text into actionable insights, the analyst processes the data through the core log analysis pipeline:
 
   
-
-```
-┌─────────────┐    ┌───────────────┐    ┌────────────┐    ┌────────────────┐
-│ 1. Parsing  │───>│ 2. Normalizing│───>│ 3. Sorting │───>│ 4. Classifying │
-└─────────────┘    └───────────────┘    └────────────┘    └────────────────┘
-                                                                  │
-┌─────────────┐    ┌───────────────┐    ┌────────────┐            │
-│ 8. Reporting│<───│ 7. Visualizing│<───│ 6. Correlate│<───────────┘
-└─────────────┘    └───────────────┘    └────────────┘    5. Enriching
-```
+![alt text](../assets/images/screenshots/sGsERg.png)
 
 1. **Parsing**: Breaking raw log entries into individual data fields.
     
