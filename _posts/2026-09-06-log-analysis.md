@@ -1,5 +1,5 @@
 ---
-title: "Passive Reconnaissance"
+title: "Guide to Log Analysis"
 date: 2026-09-06 00:01:43 +0600
 categories: [writing]
 ---
