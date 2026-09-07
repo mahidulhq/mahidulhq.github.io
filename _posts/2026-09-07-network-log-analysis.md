@@ -7,7 +7,7 @@ categories: [writing]
 
 Network-centric security monitoring relies on analyzing traffic between hosts across system boundaries. Combining host logs (internal activity) with network logs (perimeter movement) provides full visibility to identify attack vectors and build incident timelines.
 
-![alt text](1_8Zl-vaQaiRWTN0wcCItO9A.webp)
+![alt text](../assets/images/screenshots/cvrsafphajsf.jpg)
 
 ## Overview & Core Concepts
 
