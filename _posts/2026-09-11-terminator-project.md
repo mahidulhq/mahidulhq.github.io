@@ -13,7 +13,7 @@ Below is a deep dive into the engineering decisions, detection mechanics, and te
 
 
 > Repository: [`mahidulhq/TERMINATOR`](https://github.com/mahidulhq/TERMINATOR)  
-> Primary Language: **Python (100%)**
+> Primary Language: **Python (100%)**  
 > Description: *Open-Source Phishing Threat Intelligence CLI*
 
 ## Table of Contents
