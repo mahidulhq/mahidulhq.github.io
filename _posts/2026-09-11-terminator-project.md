@@ -93,7 +93,7 @@ TERMINATOR was built with modularity and cross-platform reliability in mind:
 
 To support both security researchers running Python and non-technical users looking for a single tool, the project provides two distribution options:
 
-1. **Source Code Execution (Cross-Platform):** Automated launcher scripts (`launch/run.bat` for Windows and `launch/run.sh` for Linux/macOS) handle virtual environment dependencies and pathing dynamically.
+1. **Source Code Execution (Cross-Platform):** Automated launcher scripts (`scripts/run.bat` for Windows and `scripts/run.sh` for Linux/macOS) handle virtual environment dependencies and pathing dynamically.
 2. **Standalone Windows Executable (`TERMINATOR.exe`):** Built via PyInstaller for single-file Windows deployment.
 
 ### Addresssing Antivirus Heuristics (False Positives)
