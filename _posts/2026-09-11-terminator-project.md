@@ -40,9 +40,7 @@ Rather than acting as a simple wrapper around an external API, TERMINATOR priori
 
 ### C. Shannon Entropy Analysis (`analyze_entropy`)
 
-* **What it checks:** Calculates the mathematical randomness of character distribution in the primary domain string using Shannon Entropy:
-
-$$H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)$$
+* **What it checks:** Calculates the mathematical randomness of character distribution in the primary domain string using Shannon Entropy: $H(X) = -\sum_{i=1}^{n} P(x_i) \log_2 P(x_i)$
 
 
 * **Why it matters:** Threat actors frequently use Domain Generation Algorithms (DGAs) or high-randomness subdomains (e.g., `a8f9x2z1-login.com`) to churn disposable infrastructure. A Shannon entropy score above `3.8` strongly indicates automated or randomized string generation rather than human-readable branding.
